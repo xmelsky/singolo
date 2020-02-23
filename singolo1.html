@@ -7,10 +7,32 @@
     <meta name="description" content="" />
     <meta name="author" content="" />
     <link rel="icon" href="" />
-    <title>Singolo</title>
+    <title>Singolo - perfect CSS layout</title>
+    <link rel="stylesheet" href="/assets/fonts/fonts.css" />
     <link rel="stylesheet" href="singolo1.css" />
   </head>
   <body>
-    <h1 class="page-title">Singolo</h1>
+    <h1 class="page-title page-title_hidden">Singolo</h1>
+    <div class="main-wrapper">
+      <header>
+        <div class="logo">Singolo</div>
+        <nav>
+          <ul class="menu">
+            <li class="menu__item"><a href="/#" class="menu__link active">Home</a></li>
+            <li class="menu__item"><a href="/#" class="menu__link">Services</a></li>
+            <li class="menu__item"><a href="/#" class="menu__link">Portfolio</a></li>
+            <li class="menu__item"><a href="/#" class="menu__link">About</a></li>
+            <li class="menu__item"><a href="/#" class="menu__link">Contact</a></li>
+          </ul>
+        </nav>
+      </header>
+      <main>
+        <section class="slider">
+          <div class="slider__arrow slider__arrow_left"></div>
+          <div class="slider__container"></div>
+          <div class="slider__arrow slider__arrow_right"></div>
+        </section>
+      </main>
+    </div>
   </body>
 </html>
