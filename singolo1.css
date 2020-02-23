@@ -182,12 +182,12 @@ header {
 }
 
 .slider__arrow_right {
-  background: url(/assets/images/arrow_right.png) no-repeat;
+  background: url(assets/images/arrow_right.png) no-repeat;
   margin-left: 8px;
 }
 
 .slider__arrow_left {
-  background: url(/assets/images/arrow_left.png) no-repeat;
+  background: url(assets/images/arrow_left.png) no-repeat;
   margin-left: 5px;
 }
 
@@ -238,7 +238,7 @@ header {
   width: 280px;
   height: 485px;
   background-repeat: no-repeat;
-  background-image: url(/assets/images/iphone/shadow.png);
+  background-image: url(assets/images/iphone/shadow.png);
 }
 
 .slider__phone_horizontal .slider__phone_shadow {
@@ -283,19 +283,19 @@ header {
 }
 
 .phone-screen__image-verical[data-image="1"] {
-  background-image: url(/assets/images/iphone/bg_yellow.jpg);
+  background-image: url(assets/images/iphone/bg_yellow.jpg);
 }
 
 .phone-screen__image-verical[data-image="2"] {
-  background-image: url(/assets/images/iphone/bg_blue.jpg);
+  background-image: url(assets/images/iphone/bg_blue.jpg);
 }
 
 .phone-screen__image-horizontal[data-image="1"] {
-  background-image: url(/assets/images/iphone/bg_blue.jpg);
+  background-image: url(assets/images/iphone/bg_blue.jpg);
 }
 
 .phone-screen__image-horizontal[data-image="2"] {
-  background-image: url(/assets/images/iphone/bg_yellow.jpg);
+  background-image: url(assets/images/iphone/bg_yellow.jpg);
 }
 
 .phone_screen img.vertical {
@@ -349,22 +349,22 @@ header {
 }
 
 .services__item[data-icon="pen"] {
-  background-image: url(/assets/images/pen.png);
+  background-image: url(assets/images/pen.png);
 }
 .services__item[data-icon="lightbulb"] {
-  background-image: url(/assets/images/lightbulb.png);
+  background-image: url(assets/images/lightbulb.png);
 }
 .services__item[data-icon="heart"] {
-  background-image: url(/assets/images/heart.png);
+  background-image: url(assets/images/heart.png);
 }
 .services__item[data-icon="phone"] {
-  background-image: url(/assets/images/phone.png);
+  background-image: url(assets/images/phone.png);
 }
 .services__item[data-icon="speach"] {
-  background-image: url(/assets/images/speach.png);
+  background-image: url(assets/images/speach.png);
 }
 .services__item[data-icon="star"] {
-  background-image: url(/assets/images/star.png);
+  background-image: url(assets/images/star.png);
 }
 
 .services__item_description {

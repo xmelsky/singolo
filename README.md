@@ -9,4 +9,4 @@ Project: create valid html and css web page from PSD mockup
 
 ## PSD Mockup:
 
-![Singolo Part 1](https://xmelsky.github.com/assets/images/singolo1.png)
+![Singolo Part 1](https://xmelsky.github.com/singolo/assets/images/singolo1.png)
