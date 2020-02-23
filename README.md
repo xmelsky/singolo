@@ -5,4 +5,8 @@
 
 Project: create valid html and css web page from PSD mockup
 
-## Main page: [Singolo](https://github.com/xmelsky/singolo)
+## Web page: [Singolo Part 1](https://xmelsky.github.io/singolo/singolo1.html)
+
+## PSD Mockup:
+
+![Singolo Part 1](https://xmelsky.github.com/assets/images/singolo1.png)
