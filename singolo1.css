@@ -1,22 +1,4 @@
-html,
-body,
-p,
-ul,
-li,
-blockquote,
-figure,
-fieldset,
-legend,
-textarea,
-pre,
-iframe,
-hr,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
+* {
   margin: 0;
   padding: 0;
 }
@@ -312,6 +294,15 @@ header {
 .section-wrapper {
   padding: 60px 40px 32px 40px;
   color: #767e9e;
+}
+
+.title-h1 {
+  font-family: Lato-Black, Arial, sans-serif;
+  font-size: 30px;
+  text-transform: capitalize;
+  line-height: 40px;
+  letter-spacing: 0.15px;
+  color: #666d89;
 }
 
 .our-services__title {
