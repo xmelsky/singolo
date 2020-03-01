@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="" />
+  <meta name="author" content="" />
+  <link rel="icon" href="" />
+  <title>Singolo - perfect CSS layout</title>
+  <link href="https://fonts.googleapis.com/css?family=Lato:300&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/fonts/fonts.css" />
+  <link rel="stylesheet" href="singolo.css" />
+</head>
+
+<body>
+  <h1 class="page-title page-title_hidden">Singolo</h1>
+  <div class="main-wrapper">
+    <header>
+      <div class="logo"><a href="#">Singolo</a></div>
+      <nav>
+        <ul class="menu">
+          <li class="menu__item"><a href="#" class="menu__link active">Home</a></li>
+          <li class="menu__item"><a href="#" class="menu__link">Services</a></li>
+          <li class="menu__item"><a href="#" class="menu__link">Portfolio</a></li>
+          <li class="menu__item"><a href="#" class="menu__link">About</a></li>
+          <li class="menu__item"><a href="#" class="menu__link">Contact</a></li>
+        </ul>
+        </ul>
+    </header>
+    <main>
+      <section class="slider">
+        <div class="slider__arrow">
+          <button class="slider__arrow_left"></button>
+        </div>
+        <div class="slider__container">
+          <div class="slider__phone slider__phone_vertical">
+            <div class="slider__phone_body">
+              <img src="assets/images/iphone/body.png" alt="iphone">
+              <div class="slider__phone_shadow"></div>
+              <div class="phone-screen">
+                <div class="phone-screen__image-verical active" data-image="1"></div>
+                <div class="phone-screen__image-verical" data-image="2"></div>
+              </div>
+            </div>
+          </div>
+          <div class="slider__phone slider__phone_horizontal">
+            <div class="slider__phone_body">
+              <img src="assets/images/iphone/body.png" alt="iphone">
+              <div class="slider__phone_shadow"></div>
+              <div class="phone-screen">
+                <div class="phone-screen__image-horizontal active" data-image="1"></div>
+                <div class="phone-screen__image-horizontal" data-image="2"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="slider__arrow">
+          <button class="slider__arrow_right"></button>
+        </div>
+      </section>
+      <section class="our-services">
+        <div class="section-wrapper">
+          <h1 class="our-services__title">Our services</h1>
+          <p class="our-services__subtitle">Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum. Duis
+            mollis, non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Fusce dapibus,
+            tellus ac cursus commodo, tortor mauris condimentum nibh.</p>
+          <div class="services__list">
+            <div class="services__item" data-icon="pen">
+              <div class="services__item_description">
+                <h2>Custom Design</h2>
+                <p>Curabitur vestibulum eget mauris quis laoreet. Phasellus in quam laoreet, viverra lacus ut, ultrices
+                  velit.</p>
+              </div>
+            </div>
+            <div class="services__item" data-icon="lightbulb">
+              <div class="services__item_description">
+                <h2>Inovative Ideas</h2>
+                <p>Quisque luctus, quam eget molestie com-modo, lacus purus cursus purus, nec rutrum tellus dolor id
+                  lorem.</p>
+              </div>
+            </div>
+            <div class="services__item" data-icon="heart">
+              <div class="services__item_description">
+                <h2>Love Is The Answer</h2>
+                <p>Nulla sed nunc et tortor luctus faucibus. Morbi at aliquet turpis, et consequat felis. Quisque
+                  condimentum.</p>
+              </div>
+            </div>
+            <div class="services__item" data-icon="phone">
+              <div class="services__item_description">
+                <h2>Responsive Layout</h2>
+                <p>Sed porttitor placerat rhoncus. In at nunc tellus. Maecenas blandit nunc ligula. Prae-sent elit leo.
+                </p>
+              </div>
+            </div>
+            <div class="services__item" data-icon="speach">
+              <div class="services__item_description">
+                <h2>24/ 7 Support</h2>
+                <p>Vivamus vel quam lacinia, tincidunt dui non, vehicula nisi. Nulla a sem
+                  erat.Pellen&shy;tesque
+                  egestas
+                  venenatis lorem.</p>
+              </div>
+            </div>
+            <div class="services__item" data-icon="star">
+              <div class="services__item_description">
+                <h2>Feel Like A Star</h2>
+                <p>Quisque hendrerit purus dapibus, ornare nibh vitae, viverra nibh. Fusce vitae aliquam tellus.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </section>
+      <section class="main-wrapper portfolio">
+        <div class="content-wrapper">
+          <h1 class="content-wrapper__title">Portfolio</h1>
+          <p class="content-wrapper__subtite">
+            Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.
+          </p>
+          <ul class="filter-buttons">
+            <li class="filter-buttons__item">
+              <button class="active">All</button>
+            </li>
+            <li class="filter-buttons__item">
+              <button>Web design</button>
+            </li>
+            <li class="filter-buttons__item">
+              <button>Graphic design</button>
+            </li>
+            <li class="filter-buttons__item">
+              <button>Artwork</button>
+            </li>
+          </ul>
+          <ul class="section-content">
+            <li class="section-content__item"><a href="#" target="_blank" rel="noopener noreferrer">
+                <img src="assets/images/portfolio/ship.png" alt="Project 1 photo"></a>
+            </li>
+            <li class="section-content__item"><a href="#" target="_blank" rel="noopener noreferrer">
+                <img src="assets/images/portfolio/smiling-girl.png" alt="Project 2 photo"></a>
+            </li>
+            <li class="section-content__item"><a href="#" target="_blank" rel="noopener noreferrer">
+                <img src="assets/images/portfolio/night-city.png" alt="Project 3 photo"></a>
+            </li>
+            <li class="section-content__item"><a href="#" target="_blank" rel="noopener noreferrer">
+                <img src="assets/images/portfolio/robot.png" alt="Project 4 photo"></a>
+            </li>
+            <li class="section-content__item"><a href="#" target="_blank" rel="noopener noreferrer">
+                <img src="assets/images/portfolio/funny-kids.png" alt="Project 5 photo"></a>
+            </li>
+            <li class="section-content__item"><a href="#" target="_blank" rel="noopener noreferrer">
+                <img src="assets/images/portfolio/web-tools.png" alt="Project 6 photo"></a>
+            </li>
+            <li class="section-content__item"><a href="#" target="_blank" rel="noopener noreferrer">
+                <img src="assets/images/portfolio/robo-kids.png" alt="Project 7 photo"></a>
+            </li>
+            <li class="section-content__item"><a href="#" target="_blank" rel="noopener noreferrer">
+                <img src="assets/images/portfolio/birds.png" alt="Project 8 photo"></a>
+            </li>
+            <li class="section-content__item"><a href="#" target="_blank" rel="noopener noreferrer">
+                <img src="assets/images/portfolio/sllepy-monster.png" alt="Project 9 photo"></a>
+            </li>
+            <li class="section-content__item"><a href="#" target="_blank" rel="noopener noreferrer">
+                <img src="assets/images/portfolio/words.png" alt="Project 10 photo"></a>
+            </li>
+            <li class="section-content__item"><a href="#" target="_blank" rel="noopener noreferrer">
+                <img src="assets/images/portfolio/monster.png" alt="Project 11 photo"></a>
+            </li>
+            <li class="section-content__item"><a href="#" target="_blank" rel="noopener noreferrer">
+                <img src="assets/images/portfolio/broken-photo.png" alt="Project 12 photo"></a>
+            </li>
+            <li class="section-content__item"><a href="#" target="_blank" rel="noopener noreferrer">
+                <img src="assets/images/portfolio/extra-img.png" alt="Project 13 photo"></a>
+            </li>
+          </ul>
+
+        </div>
+      </section>
+      <section class="main-wrapper about">
+        <div class="content-wrapper">
+          <h1 class="content-wrapper__title">About us</h1>
+          <p class="content-wrapper__subtite">Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum. Duis
+            mollis, non commodo luctus, nisi erat porttitor
+            ligula, eget lacinia odio sem nec elit. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.
+          </p>
+          <div class="divider"></div>
+          <ul class="section-content">
+            <li class="section-content__item">
+              <img src="assets/images/about/adam.png" alt="Adam's photo">
+              <div class="section-content__description">
+                <div class="description-title">Adam Jensen</div>
+                <div class="description-subtitle">Quisque luctus, quam eget molestie commodo, lacus purus cursus purus, nec
+                  rutrum tellus dolor id lorem.</div>
+                <ul class="social">
+                  <li class="social__icon facebook"></li>
+                  <li class="social__icon google"></li>
+                  <li class="social__icon twitter"></li>
+                  <li class="social__icon linkedin"></li>
+                </ul>
+              </div>
+            </li>
+            <li class="section-content__item">
+              <img src="assets/images/about/desmond.png" alt="Desmond's' photo">
+              <div class="section-content__description">
+                <div class="description-title">Desmond Miles</div>
+                <div class="description-subtitle">Curabitur vestibulum eget mauris quis laoreet. Phasellus in quam laoreet,
+                  viverra lacus ut, ultrices velit.</div>
+                <ul class="social">
+                  <li class="social__icon facebook"></li>
+                  <li class="social__icon google"></li>
+                  <li class="social__icon twitter"></li>
+                  <li class="social__icon linkedin"></li>
+                </ul>
+              </div>
+            </li>
+            <li class="section-content__item">
+              <img src="assets/images/about/scolara.png" alt="Scolara's photo">
+              <div class="section-content__description">
+                <div class="description-title">Scolara<small class="small-space"> </small>Visari</div>
+                <div class="description-subtitle">Nulla sed nunc et tortor luctus faucibus. Morbi at aliquet turpis, et
+                  consequat felis. Quisque condimentum.</div>
+                <ul class="social">
+                  <li class="social__icon facebook"></li>
+                  <li class="social__icon google"></li>
+                  <li class="social__icon twitter"></li>
+                  <li class="social__icon linkedin"></li>
+                </ul>
+              </div>
+            </li>
+          </ul>
+        </div>
+
+      </section>
+    </main>
+  </div>
+</body>
+
+</html>

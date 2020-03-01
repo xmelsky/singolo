@@ -197,6 +197,10 @@ body {
   margin-top: 22px;
 }
 
+.section-content li:first-child .social .linkedin {
+  width: 33px;
+}
+
 .social__icon {
   width: 34px;
   height: 34px;
