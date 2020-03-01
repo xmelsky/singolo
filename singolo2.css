@@ -159,9 +159,6 @@ body {
   letter-spacing: 0.5px;
 }
 
-
-
-
 .filter-buttons button:hover,
 .filter-buttons button.active {
   cursor: pointer;
@@ -210,6 +207,10 @@ body {
   -moz-transition: all .3s ease-in;
   -ms-transition: all .3s ease-in;
   -o-transition: all .3s ease-in;
+}
+
+.section-content li:first-child .social .linkedin {
+  width: 33px;
 }
 
 .social__icon:hover {
