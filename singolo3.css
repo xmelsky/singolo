@@ -1,0 +1,45 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 100%;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+a:link {
+  font-weight: normal;
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+button,
+input,
+select,
+textarea {
+  margin: 0;
+  border: none;
+}
+
+button:hover,
+button:active,
+button:focus {
+  cursor: pointer;
+  outline: none;
+}
+
+body {
+  font-family: "Lato-Regular", Arial, sans-serif;
+}
+
+/*# sourceMappingURL=singolo3.css.map */

@@ -1,0 +1,20 @@
+{
+  "name": "singolo3",
+  "version": "1.0.0",
+  "description": "simple design project (css+sass)",
+  "main": "index.js",
+  "scripts": {
+    "style": "sass --watch sass/main.scss singolo3.css",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/xmelsky/singolo.git"
+  },
+  "author": "@xmelsky",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/xmelsky/singolo/issues"
+  },
+  "homepage": "https://github.com/xmelsky/singolo#readme"
+}
