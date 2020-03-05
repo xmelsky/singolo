@@ -5,7 +5,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Singolo part 3</title>
-  <link href="https://fonts.googleapis.com/css?family=Lato:300&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Lato:300&display=swap"
+    rel="stylesheet">
   <link rel="stylesheet" href="assets/fonts/fonts.css">
   <link rel="stylesheet" href="singolo3.css">
 </head>
@@ -14,20 +15,46 @@
   <section class="main-wrapper ">
     <div class="content-wrapper getQuote">
       <h1 class="content-wrapper__title">Get <small>a</small> Quote</h1>
-      <p class="content-wrapper__subtite">Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum. Duis
-        mollis, non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Fusce dapibus, tellus ac
+      <p class="content-wrapper__subtite">Fusce dapibus, tellus ac cursus
+        commodo, tortor mauris condimentum. Duis
+        mollis, non commodo luctus, nisi erat porttitor ligula, eget lacinia
+        odio sem nec elit. Fusce dapibus, tellus ac
         cursus commodo, tortor mauris condimentum nibh.
       </p>
 
       <div class="base-layout layout-2column">
         <form class="contact-form" onsubmit="alert('Form submitted...');">
-          <input class="contact-form__input" type="text" name="" required placeholder="Name (Required)">
-          <input class="contact-form__input" type="text" name="" required>
-          <input class="contact-form__input" type="text" name="" required>
-          <input class="contact-form__input" type="textarea" name="" required>
-          <input type="submit" value="Send" class="button button-submit" type="submit">
+          <input class="contact-form__input" type="text" name="Name" required
+            placeholder="Name (Required)">
+          <input class="contact-form__input" type="text" name="Email" required
+            placeholder="Email (Required)">
+          <input class="contact-form__input" type="text" name="Subject"
+            placeholder="Subject">
+          <textarea class="contact-form__textarea" name="Description" rows="50"
+            cols="33">Describe your project in detail...</textarea>
+          <input type="submit" value="Send" class="button button-submit"
+            type="submit">
         </form>
-        <div class="contact-info"></div>
+        <div class="contact-info">
+          <h3 class="contact-info__title">Contact information</h3>
+          <p class="contact-info__description">
+            Quisque hendrerit purus dapibus, ornare nibh vitae, viver&shy;ra nibh.
+            Fusce vitae aliquam tellus. Proin sit amet volutpat libero. Nulla
+            sed nunc et tortor luctus faucibus. Morbi at aliquet turpis, et
+            consequat felis.
+          </p>
+          <address>
+            <object type="image/svg+xml" data="assets/images/contacts/marker.svg" class="addr-icon">Your browser doesn't suppot svg</object><a href="http://maps.google.com/maps?q=14/15+Elm+St.+Lost City" target="_blank">Elm St. 14/05 Lost City</a><br>
+            <object type="image/svg+xml" data="assets/images/contacts/phone.svg" class="addr-icon">Your browser doesn't suppot svg</object><a href="tel:03528 331 86 35">03528 331 86 35</a><br>
+            <object type="image/svg+xml" data="assets/images/contacts/mail.svg" class="addr-icon">Your browser doesn't suppot svg</object><a href="mailto:info@singolo.com">info@singolo.com</a>
+          </address>
+          <ul class="contact-info__contacts">
+            <li class="contacts-info__item">
+            </li>
+            <li class="contacts-info__item"></li>
+            <li class="contacts-info__item"></li>
+          </ul>
+        </div>
       </div>
     </div>
 
