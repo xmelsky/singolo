@@ -179,6 +179,23 @@ header {
   width: 20px;
   height: 27px;
   cursor: pointer;
+  transition: transform .2s ease-in;
+  -webkit-transition: transform .2s ease-in;
+  -moz-transition: transform .2s ease-in;
+  -ms-transition: transform .2s ease-in;
+  -o-transition: transform .2s ease-in;
+}
+
+.slider__arrow button:hover {
+  transform: scale(1.5);
+  -webkit-transform: scale(1.5);
+  -moz-transform: scale(1.5);
+  -ms-transform: scale(1.5);
+  -o-transform: scale(1.5);
+}
+
+.slider__arrow button:focus {
+  outline: none;
 }
 
 .slider__arrow_right {
@@ -230,7 +247,7 @@ header {
   background-repeat: no-repeat;
 }
 .slider__phone_body img {
-  z-index: 1;
+  z-index: 2;
   position: relative;
 }
 .slider__phone_shadow {
@@ -239,6 +256,7 @@ header {
   height: 485px;
   background-repeat: no-repeat;
   background-image: url(assets/images/iphone/shadow.png);
+  z-index: 1;
 }
 
 .slider__phone_horizontal .slider__phone_shadow {
@@ -257,6 +275,7 @@ header {
   top: 65px;
   width: 188px;
   height: 333px;
+  z-index: 3;
 }
 
 .phone-screen__image-verical {
@@ -375,13 +394,16 @@ header {
 
 .services__item_description h2 {
   font-family: Lato-Black, Arial, sans-serif;
-  font-size: 17px;
-  line-height: 23px;
-  letter-spacing: 0.5px;
+  font-size: 18px;
+  line-height: 22px;
+  letter-spacing: 0.05px;
 }
 
 .services__item_description p {
   font-size: 12px;
   padding-top: 7px;
   line-height: 21px;
+  height: 75px;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
