@@ -117,11 +117,7 @@ input:-webkit-autofill {
   text-align: justify;
   font-size: 12px;
   line-height: 22px;
-  letter-spacing: -0.2px;
-}
-.getQuote .contact-info__description:first-line {
-  font-size: 11px;
-  letter-spacing: 0.3px;
+  letter-spacing: -0.1px;
 }
 .getQuote .contact-info address {
   padding-top: 20px;
@@ -132,6 +128,17 @@ input:-webkit-autofill {
   text-decoration: none;
   font-style: normal;
   color: #f0d8d9;
+}
+.getQuote .contact-info address p {
+  display: flex;
+  letter-spacing: -0.1px;
+  line-height: 22px;
+}
+.getQuote .contact-info address span {
+  display: flex;
+}
+.getQuote .contact-info address p:nth-child(3) span {
+  padding-top: 2px;
 }
 .getQuote .contact-info .addr-icon {
   width: 12px;
@@ -145,6 +152,7 @@ path.contacts-icon {
 }
 
 .contact-form {
+  position: relative;
   background-color: #f06c64;
   max-width: 619px;
   flex-grow: 1;
@@ -163,7 +171,7 @@ path.contacts-icon {
   background-color: #d6564f;
 }
 .contact-form__input:nth-child(4)::placeholder, .contact-form__textarea:nth-child(4)::placeholder {
-  letter-spacing: 2px !important;
+  letter-spacing: 0;
 }
 .contact-form__input::placeholder, .contact-form__textarea::placeholder {
   font-size: 12px;
@@ -178,6 +186,30 @@ path.contacts-icon {
   color: #f48c8f;
   line-height: 3.1em;
   letter-spacing: -0.01px;
+}
+
+.button-submit {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  padding: 12px 40px;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  background-color: #d6564f;
+  transition: all 0.3s ease-in;
+  -webkit-transition: all 0.3s ease-in;
+  -moz-transition: all 0.3s ease-in;
+  -ms-transition: all 0.3s ease-in;
+  -o-transition: all 0.3s ease-in;
+}
+
+.button-submit:hover {
+  cursor: pointer;
+  color: #fff;
+  background-color: inherit;
 }
 
 /*# sourceMappingURL=singolo3.css.map */

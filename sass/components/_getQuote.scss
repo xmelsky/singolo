@@ -36,24 +36,34 @@
       text-align: justify;
       font-size: 12px;
       line-height: 22px;
-      letter-spacing: -0.2px;
-    }
-
-    &__description:first-line {
-      font-size: 11px;
-      letter-spacing: 0.3px;
+      letter-spacing: -0.1px;
     }
 
     address {
       padding-top: 20px;
       font-size: 12px;
       line-height: 21px;
-    }
 
-    address a {
-      text-decoration: none;
-      font-style: normal;
-      color: $color-secondary-font;
+      & a {
+        text-decoration: none;
+        font-style: normal;
+        color: $color-secondary-font;
+      }
+
+      & p {
+        display: flex;
+        letter-spacing: -0.1px;
+        line-height: 22px;
+      }
+
+      & span {
+        display: flex;
+      }
+
+      & p:nth-child(3) span {
+        padding-top: 2px;
+      }
+
     }
 
     .addr-icon {
