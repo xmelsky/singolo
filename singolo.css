@@ -31,6 +31,13 @@ textarea {
   border: none;
 }
 
+input:-webkit-autofill {
+  box-shadow: inset;
+  -webkit-text-fill-color: #f48c8f;
+  -webkit-box-shadow: 0 0 0px 1000px #d6564f inset;
+  transition: background-color 5000s ease-in-out 0s;
+}
+
 body {
   font-family: "Lato-Regular", Arial, sans-serif;
 }
@@ -679,3 +686,191 @@ header {
   mask-image: url(assets/images/social/linkedin.svg);
   -webkit-mask-image: url(assets/images/social/linkedin.svg);
 }
+
+.content-wrapper .content-wrapper__title {
+  font-family: "Lato-Black", Arial, sans-serif;
+  font-size: 30px;
+  text-transform: capitalize;
+  line-height: 40px;
+  letter-spacing: 0.15px;
+  color: inherit;
+}
+.content-wrapper .content-wrapper__subtite {
+  font-family: "Lato-Light", Arial, sans-serif;
+  font-size: 18px;
+  text-align: justify;
+  padding: 10px 0 9px;
+  line-height: 29px;
+  -webkit-text-stroke: 0.2px;
+  letter-spacing: -0.4px;
+  color: inherit;
+}
+
+.getQuote {
+  background-color: #f06c64;
+  color: #f0d8d9;
+  border-bottom: 6px solid #ea676b;
+  padding-bottom: 51px;
+}
+.getQuote .layout-2column {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 37px;
+}
+.getQuote .content-wrapper__subtite {
+  font-family: "Lato", Arial, sans-serif;
+  line-height: 1.4em;
+  -webkit-text-stroke: 0.2px;
+  letter-spacing: 0px;
+}
+.getQuote .content-wrapper__subtite::first-line {
+  line-height: 2em;
+}
+.getQuote small {
+  font-size: inherit;
+  text-transform: lowercase;
+  margin-right: -3px;
+}
+.getQuote .contact-info {
+  max-width: 300px;
+}
+.getQuote .contact-info__title {
+  line-height: 22px;
+  letter-spacing: -0.01px;
+}
+.getQuote .contact-info__description {
+  padding-top: 6px;
+  text-align: justify;
+  font-size: 12px;
+  line-height: 22px;
+  letter-spacing: -0.1px;
+}
+.getQuote .contact-info address {
+  padding-top: 20px;
+  font-size: 12px;
+  line-height: 21px;
+}
+.getQuote .contact-info address a {
+  text-decoration: none;
+  font-style: normal;
+  color: #f0d8d9;
+}
+.getQuote .contact-info address p {
+  display: flex;
+  letter-spacing: -0.1px;
+  line-height: 22px;
+}
+.getQuote .contact-info address span {
+  display: flex;
+}
+.getQuote .contact-info address p:nth-child(3) span {
+  padding-top: 2px;
+}
+.getQuote .contact-info .addr-icon {
+  width: 12px;
+  height: 12px;
+  margin-right: 10px;
+  margin-top: 3px;
+}
+
+path.contacts-icon {
+  fill: #f0d8d9;
+}
+
+.contact-form {
+  position: relative;
+  background-color: #f06c64;
+  max-width: 619px;
+  flex-grow: 1;
+}
+.contact-form__input, .contact-form__textarea {
+  display: block;
+  width: 100%;
+  height: 38px;
+  margin-bottom: 16px;
+  padding-left: 14px;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  color: rgb(245, 245, 245);
+  background-color: #d6564f;
+}
+.contact-form__input:nth-child(4)::placeholder, .contact-form__textarea:nth-child(4)::placeholder {
+  letter-spacing: 0;
+}
+.contact-form__input::placeholder, .contact-form__textarea::placeholder {
+  font-size: 12px;
+  color: #f48c8f;
+  line-height: 3.1em;
+  letter-spacing: 0.3px;
+}
+.contact-form__textarea {
+  height: 202px;
+  resize: none;
+  font-size: 12px;
+  line-height: 3.1em;
+  letter-spacing: -0.01px;
+}
+
+.button-submit {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  padding: 12px 40px;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  color: #f48c8f;
+  background-color: #d6564f;
+  transition: all 0.3s ease-in;
+  -webkit-transition: all 0.3s ease-in;
+  -moz-transition: all 0.3s ease-in;
+  -ms-transition: all 0.3s ease-in;
+  -o-transition: all 0.3s ease-in;
+}
+
+.button-submit:hover {
+  cursor: pointer;
+  color: #fff;
+  background-color: inherit;
+}
+
+.footer .social {
+  display: flex;
+  justify-content: space-between;
+  width: 153px;
+  margin-top: 0;
+}
+
+.section-content li:first-child .social .linkedin {
+  width: 33px;
+}
+
+.footer {
+  height: 76px;
+  background-color: #2d303a;
+}
+
+.footer .layout-col-2 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 21px 39px 15px 14px;
+}
+
+.footer .content-wrapper {
+  padding: 0;
+}
+
+.copyright {
+  font-size: 12px;
+  display: block;
+  text-align: center;
+  width: 146px;
+}
+
+/*# sourceMappingURL=singolo3.css.map */
