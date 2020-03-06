@@ -31,11 +31,6 @@ textarea {
   border: none;
 }
 
-button:active,
-button:focus {
-  outline: none;
-}
-
 body {
   font-family: "Lato-Regular", Arial, sans-serif;
 }
@@ -166,6 +161,23 @@ header {
   width: 20px;
   height: 27px;
   cursor: pointer;
+  transition: transform .2s ease-in;
+  -webkit-transition: transform .2s ease-in;
+  -moz-transition: transform .2s ease-in;
+  -ms-transition: transform .2s ease-in;
+  -o-transition: transform .2s ease-in;
+}
+
+.slider__arrow button:hover {
+  transform: scale(1.5);
+  -webkit-transform: scale(1.5);
+  -moz-transform: scale(1.5);
+  -ms-transform: scale(1.5);
+  -o-transform: scale(1.5);
+}
+
+.slider__arrow button:focus {
+  outline: none;
 }
 
 .slider__arrow_right {
@@ -217,7 +229,7 @@ header {
   background-repeat: no-repeat;
 }
 .slider__phone_body img {
-  z-index: 1;
+  z-index: 2;
   position: relative;
 }
 .slider__phone_shadow {
@@ -226,6 +238,7 @@ header {
   height: 485px;
   background-repeat: no-repeat;
   background-image: url(assets/images/iphone/shadow.png);
+  z-index: 1;
 }
 
 .slider__phone_horizontal .slider__phone_shadow {
@@ -244,6 +257,7 @@ header {
   top: 65px;
   width: 188px;
   height: 333px;
+  z-index: 3;
 }
 
 .phone-screen__image-verical {
@@ -371,15 +385,18 @@ header {
 
 .services__item_description h2 {
   font-family: Lato-Black, Arial, sans-serif;
-  font-size: 17px;
-  line-height: 23px;
-  letter-spacing: 0.5px;
+  font-size: 18px;
+  line-height: 22px;
+  letter-spacing: 0.05px;
 }
 
 .services__item_description p {
   font-size: 12px;
   padding-top: 7px;
   line-height: 21px;
+  height: 75px;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 /* PART 2 - Singolo 2: Portfolio & About Us */
@@ -442,7 +459,78 @@ header {
 
 .section-content__item {
   margin-bottom: 15px;
+}
 
+.portfolio .section-content__item {
+  position: relative;
+  overflow: hidden;
+  width: 220px;
+  height: 187px;
+  margin-bottom: 20px;
+}
+
+[data-imageName="birds"] {
+  top: -32px;
+  left: -24px;
+}
+
+[data-imageName="broken-photo"] {
+  top: -60px;
+  left: -36px;
+}
+
+[data-imageName="robot"] {
+  top: -2px;
+  left: -24px;
+}
+
+[data-imageName="monster"] {
+  top: -175px;
+  left: -144px;
+}
+
+[data-imageName="robo-kids"] {
+  top: -39px;
+  left: -31px;
+}
+
+[data-imageName="funny-kids"] {
+  top: -16px;
+  left: -10px;
+}
+
+[data-imageName="web-tools"] {
+  top: -4px;
+  left: -16px;
+}
+
+[data-imageName="sllepy-monster"] {
+  top: -2px;
+  left: -16px;
+}
+
+[data-imageName="ship"] {
+  top: -11px;
+  left: -8px;
+}
+
+[data-imageName="smile-girl"] {
+  top: -43px;
+  left: -82px;
+}
+
+[data-imageName="night-city"] {
+  top: -1px;
+  left: -11px;
+}
+
+[data-imageName="words"] {
+  top: -113px;
+  left: -141px;
+}
+
+.portfolio .section-content__item img {
+  position: absolute;
 }
 
 .about .section-content__item {
@@ -454,13 +542,17 @@ header {
   right: 1px;
 }
 
-.about .section-content__item img:hover + .section-content__description > .description-title {
+.about
+  .section-content__item
+  img:hover
+  + .section-content__description
+  > .description-title {
   color: #f06c64;
-  transition: color .2s ease-in;
-  -webkit-transition: color .2s ease-in;
-  -moz-transition: color .2s ease-in;
-  -ms-transition: color .2s ease-in;
-  -o-transition: color .2s ease-in;
+  transition: color 0.2s ease-in;
+  -webkit-transition: color 0.2s ease-in;
+  -moz-transition: color 0.2s ease-in;
+  -ms-transition: color 0.2s ease-in;
+  -o-transition: color 0.2s ease-in;
 }
 
 .filter-buttons {
@@ -474,9 +566,9 @@ header {
 .filter-buttons button {
   text-transform: capitalize;
   font-size: 12px;
-    line-height: 0;
-    height: 22px;
-    padding: 5px 5px;
+  line-height: 0;
+  height: 22px;
+  padding: 5px 5px;
   transition: all 0.3s ease-in;
   -webkit-transition: all 0.3s ease-in;
   -moz-transition: all 0.3s ease-in;
@@ -503,9 +595,6 @@ header {
   letter-spacing: 0.5px;
 }
 
-
-
-
 .filter-buttons button:hover,
 .filter-buttons button.active {
   cursor: pointer;
@@ -518,6 +607,9 @@ header {
   font-size: 18px;
   letter-spacing: -0.2px;
   padding: 12px 0 0;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
 }
 
 .description-subtitle {
@@ -541,6 +633,10 @@ header {
   margin-top: 22px;
 }
 
+.section-content li:first-child .social .linkedin {
+  width: 33px;
+}
+
 .social__icon {
   width: 34px;
   height: 34px;
@@ -549,20 +645,20 @@ header {
   mask-repeat: no-repeat;
   -webkit-mask-repeat: no-repeat;
   background-color: #666d89;
-  transition: all .3s ease-in;
-  -webkit-transition: all .3s ease-in;
-  -moz-transition: all .3s ease-in;
-  -ms-transition: all .3s ease-in;
-  -o-transition: all .3s ease-in;
+  transition: all 0.3s ease-in;
+  -webkit-transition: all 0.3s ease-in;
+  -moz-transition: all 0.3s ease-in;
+  -ms-transition: all 0.3s ease-in;
+  -o-transition: all 0.3s ease-in;
+}
+
+.section-content li:first-child .social .linkedin {
+  width: 33px;
 }
 
 .social__icon:hover {
   cursor: pointer;
   background-color: #e83d28;
-}
-
-.section-content li:first-child .social .linkedin {
-  width: 33px;
 }
 
 .social__icon.facebook {
