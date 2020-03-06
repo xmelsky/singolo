@@ -148,7 +148,7 @@ header {
 
 /* SLIDER */
 
-.slider {
+ .slider {
   display: flex;
   flex-wrap: nowrap;
   background-color: #f06c64;
@@ -186,6 +186,8 @@ header {
 .slider__arrow button:focus {
   outline: none;
 }
+
+/*
 
 .slider__arrow_right {
   background: url(assets/images/arrow_right.png) no-repeat;
@@ -309,7 +311,7 @@ header {
 .phone_screen img.vertical {
   bottom: 135px;
   right: 14px;
-}
+} */
 
 /* OUR SERVICES */
 
