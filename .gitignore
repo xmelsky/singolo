@@ -1,6 +1,3 @@
 psd/
-*2.html
-*2.css
-singolo3.css.map
 node_modules
-.vscode
+.vscode/
