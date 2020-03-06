@@ -1,6 +1,8 @@
 .getQuote {
   background-color: $color-main-fill;
   color: $color-secondary-font;
+  border-bottom: 6px solid $color-border-bottom-main;
+  padding-bottom: 51px;
 
   .layout-2column {
     display: flex;
@@ -63,7 +65,6 @@
       & p:nth-child(3) span {
         padding-top: 2px;
       }
-
     }
 
     .addr-icon {
