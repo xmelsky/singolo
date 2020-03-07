@@ -29,7 +29,7 @@ select,
 textarea {
   margin: 0;
   border: none;
-  font-family: "Lato-Regular", Arial, sans-serif;
+  font-family: 'Lato-Regular', Arial, sans-serif;
   color: #f48c8f;
   letter-spacing: 0.5px;
 }
@@ -43,7 +43,7 @@ button:focus {
 
 body {
   line-height: 1.75em;
-  font-family: "Lato-Regular", Arial, sans-serif;
+  font-family: 'Lato-Regular', Arial, sans-serif;
 }
 
 input:-webkit-autofill {
@@ -64,7 +64,7 @@ input:-webkit-autofill {
   color: #767e9e;
 }
 .content-wrapper .content-wrapper__title {
-  font-family: "Lato-Black", Arial, sans-serif;
+  font-family: 'Lato-Black', Arial, sans-serif;
   font-size: 30px;
   text-transform: capitalize;
   line-height: 40px;
@@ -72,7 +72,7 @@ input:-webkit-autofill {
   color: inherit;
 }
 .content-wrapper .content-wrapper__subtite {
-  font-family: "Lato-Light", Arial, sans-serif;
+  font-family: 'Lato-Light', Arial, sans-serif;
   font-size: 18px;
   text-align: justify;
   padding: 10px 0 9px;
@@ -94,7 +94,7 @@ input:-webkit-autofill {
   padding-top: 37px;
 }
 .getQuote .content-wrapper__subtite {
-  font-family: "Lato", Arial, sans-serif;
+  font-family: 'Lato', Arial, sans-serif;
   line-height: 1.4em;
   -webkit-text-stroke: 0.2px;
   letter-spacing: 0px;
@@ -159,7 +159,8 @@ path.contacts-icon {
   max-width: 619px;
   flex-grow: 1;
 }
-.contact-form__input, .contact-form__textarea {
+.contact-form__input,
+.contact-form__textarea {
   display: block;
   width: 100%;
   height: 38px;
@@ -172,10 +173,12 @@ path.contacts-icon {
   -o-border-radius: 5px;
   background-color: #d6564f;
 }
-.contact-form__input:nth-child(4)::placeholder, .contact-form__textarea:nth-child(4)::placeholder {
+.contact-form__input:nth-child(4)::placeholder,
+.contact-form__textarea:nth-child(4)::placeholder {
   letter-spacing: 0;
 }
-.contact-form__input::placeholder, .contact-form__textarea::placeholder {
+.contact-form__input::placeholder,
+.contact-form__textarea::placeholder {
   font-size: 12px;
   color: #f48c8f;
   line-height: 3.1em;
@@ -246,23 +249,23 @@ path.contacts-icon {
 }
 
 .social__icon.facebook {
-  mask-image: url(assets/images/social/facebook.svg);
-  -webkit-mask-image: url(assets/images/social/facebook.svg);
+  mask-image: url(../assets/images/social/facebook.svg);
+  -webkit-mask-image: url(../assets/images/social/facebook.svg);
 }
 
 .social__icon.google {
-  mask-image: url(assets/images/social/google+.svg);
-  -webkit-mask-image: url(assets/images/social/google+.svg);
+  mask-image: url(../assets/images/social/google+.svg);
+  -webkit-mask-image: url(../assets/images/social/google+.svg);
 }
 
 .social__icon.twitter {
-  mask-image: url(assets/images/social/twitter.svg);
-  -webkit-mask-image: url(assets/images/social/twitter.svg);
+  mask-image: url(../assets/images/social/twitter.svg);
+  -webkit-mask-image: url(../assets/images/social/twitter.svg);
 }
 
 .social__icon.linkedin {
-  mask-image: url(assets/images/social/linkedin.svg);
-  -webkit-mask-image: url(assets/images/social/linkedin.svg);
+  mask-image: url(../assets/images/social/linkedin.svg);
+  -webkit-mask-image: url(../assets/images/social/linkedin.svg);
 }
 
 .footer {

@@ -152,6 +152,7 @@
 
 .phone-screen__image-verical[data-image='2'] {
   background-image: url(../assets/images/iphone/bg_blue.jpg);
+  background-position: -138px -52px;
 }
 
 .phone-screen__image-horizontal[data-image='1'] {
@@ -160,6 +161,7 @@
 
 .phone-screen__image-horizontal[data-image='2'] {
   background-image: url(../assets/images/iphone/bg_yellow.jpg);
+  background-position: 568px -250px;
 }
 
 .phone_screen img.vertical {

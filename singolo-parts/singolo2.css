@@ -37,7 +37,7 @@ button:focus {
 }
 
 body {
-  font-family: "Lato-Regular", Arial, sans-serif;
+  font-family: 'Lato-Regular', Arial, sans-serif;
 }
 
 .small-space {
@@ -108,62 +108,62 @@ body {
   margin-bottom: 20px;
 }
 
-[data-imageName="birds"] {
+[data-imageName='birds'] {
   top: -32px;
   left: -24px;
 }
 
-[data-imageName="broken-photo"] {
+[data-imageName='broken-photo'] {
   top: -60px;
   left: -36px;
 }
 
-[data-imageName="robot"] {
+[data-imageName='robot'] {
   top: -2px;
   left: -24px;
 }
 
-[data-imageName="monster"] {
+[data-imageName='monster'] {
   top: -175px;
   left: -144px;
 }
 
-[data-imageName="robo-kids"] {
+[data-imageName='robo-kids'] {
   top: -39px;
   left: -31px;
 }
 
-[data-imageName="funny-kids"] {
+[data-imageName='funny-kids'] {
   top: -16px;
   left: -10px;
 }
 
-[data-imageName="web-tools"] {
+[data-imageName='web-tools'] {
   top: -4px;
   left: -16px;
 }
 
-[data-imageName="sllepy-monster"] {
+[data-imageName='sllepy-monster'] {
   top: -2px;
   left: -16px;
 }
 
-[data-imageName="ship"] {
+[data-imageName='ship'] {
   top: -11px;
   left: -8px;
 }
 
-[data-imageName="smile-girl"] {
+[data-imageName='smile-girl'] {
   top: -43px;
   left: -82px;
 }
 
-[data-imageName="night-city"] {
+[data-imageName='night-city'] {
   top: -1px;
   left: -11px;
 }
 
-[data-imageName="words"] {
+[data-imageName='words'] {
   top: -113px;
   left: -141px;
 }
@@ -301,20 +301,20 @@ body {
 }
 
 .social__icon.facebook {
-  mask-image: url(assets/images/social/facebook.svg);
-  -webkit-mask-image: url(assets/images/social/facebook.svg);
+  mask-image: url(../assets/images/social/facebook.svg);
+  -webkit-mask-image: url(../assets/images/social/facebook.svg);
 }
 
 .social__icon.google {
-  mask-image: url(assets/images/social/google+.svg);
-  -webkit-mask-image: url(assets/images/social/google+.svg);
+  mask-image: url(../assets/images/social/google+.svg);
+  -webkit-mask-image: url(../assets/images/social/google+.svg);
 }
 
 .social__icon.twitter {
-  mask-image: url(assets/images/social/twitter.svg);
-  -webkit-mask-image: url(assets/images/social/twitter.svg);
+  mask-image: url(../assets/images/social/twitter.svg);
+  -webkit-mask-image: url(../assets/images/social/twitter.svg);
 }
 .social__icon.linkedin {
-  mask-image: url(assets/images/social/linkedin.svg);
-  -webkit-mask-image: url(assets/images/social/linkedin.svg);
+  mask-image: url(../assets/images/social/linkedin.svg);
+  -webkit-mask-image: url(../assets/images/social/linkedin.svg);
 }

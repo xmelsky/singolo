@@ -7,11 +7,11 @@ Task: create valid html and css web page from PSD mockup
 
 ## Full webpage [full version](https://xmelsky.github.io/singolo)
 
-### Web page: [Singolo Part 1](https://xmelsky.github.io/singolo/singolo1.html)
+### Web page: [Singolo Part 1](https://xmelsky.github.io/singolo/singolo-parts/singolo1.html)
 
-### Web page: [Singolo Part 2](https://xmelsky.github.io/singolo/singolo2.html)
+### Web page: [Singolo Part 2](https://xmelsky.github.io/singolo/singolo-parts/singolo2.html)
 
-### Web page: [Singolo Part 3](https://xmelsky.github.io/singolo/singolo3.html)
+### Web page: [Singolo Part 3](https://xmelsky.github.io/singolo/singolo-parts/singolo3.html)
 
 ## PSD Mockup:
 
