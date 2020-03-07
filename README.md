@@ -1,9 +1,9 @@
-# The fisrt part of Singolo project
+# Singolo project - pixel perfect web page layout
 
 ![Completed](https://img.shields.io/badge/completed-99%25-brightgreen)
 ![Completed](https://img.shields.io/badge/last%20update-06--03--2020-blue)
 
-Project: create valid html and css web page from PSD mockup
+Task: create valid html and css web page from PSD mockup
 
 ## Full webpage [full version](https://xmelsky.github.io/singolo)
 ### Web page: [Singolo Part 1](https://xmelsky.github.io/singolo/singolo1.html)
