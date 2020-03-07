@@ -36,6 +36,7 @@
     </header>
     <main>
       <section class="slider">
+        <h2 class="our-services__title page-title_hidden">Slider</h2>
         <div class="slider__arrow">
           <button class="slider__arrow_left" data-direction="left"></button>
         </div>
@@ -70,7 +71,7 @@
       </section>
       <section class="our-services">
         <div class="section-wrapper">
-          <h1 class="our-services__title">Our services</h1>
+          <h2 class="our-services__title">Our services</h2>
           <p class="our-services__subtitle">Fusce dapibus, tellus ac cursus
             commodo, tortor mauris condimentum. Duis
             mollis, non commodo luctus, nisi erat porttitor ligula, eget lacinia
@@ -132,7 +133,7 @@
       </section>
       <section class="main-wrapper portfolio">
         <div class="content-wrapper">
-          <h1 class="content-wrapper__title">Portfolio</h1>
+          <h2 class="content-wrapper__title">Portfolio</h2>
           <p class="content-wrapper__subtite">
             Duis mollis, est non commodo luctus, nisi erat porttitor ligula,
             eget lacinia odio sem nec elit.
@@ -223,7 +224,7 @@
       </section>
       <section class="main-wrapper about">
         <div class="content-wrapper">
-          <h1 class="content-wrapper__title">About us</h1>
+          <h2 class="content-wrapper__title">About us</h2>
           <p class="content-wrapper__subtite">Fusce dapibus, tellus ac cursus
             commodo, tortor mauris condimentum. Duis
             mollis, non commodo luctus, nisi erat porttitor
@@ -284,7 +285,7 @@
       </section>
       <section class="main-wrapper ">
         <div class="content-wrapper getQuote">
-          <h1 class="content-wrapper__title">Get <small>a</small> Quote</h1>
+          <h2 class="content-wrapper__title">Get <small>a</small> Quote</h2>
           <p class="content-wrapper__subtite">Fusce dapibus, tellus ac cursus
             commodo, tortor mauris condimentum. Duis
             mollis, non commodo luctus, nisi erat porttitor ligula, eget lacinia
@@ -294,14 +295,14 @@
 
           <div class="base-layout layout-2column">
             <form class="contact-form" onsubmit="alert('Form submitted...');">
-              <input class="contact-form__input" type="text" name="Name"
+              <input class="contact-form__input" type="text" name="Name" minlength="3"
                 required placeholder="Name (Required)">
               <input class="contact-form__input" type="email" name="Email"
                 required placeholder="Email (Required)">
               <input class="contact-form__input" type="text" name="Subject"
                 placeholder="Subject">
               <textarea class="contact-form__textarea" name="Description"
-                rows="50" cols="33"
+                rows="50" cols="33" minlength="25"
                 placeholder="Describe your project in detail..."></textarea>
               <input class="button button-submit" type="submit" value="Send">
             </form>
