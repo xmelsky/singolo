@@ -295,14 +295,14 @@
 
           <div class="base-layout layout-2column">
             <form class="contact-form" onsubmit="alert('Form submitted...');">
-              <input class="contact-form__input" type="text" name="Name"
+              <input class="contact-form__input" type="text" name="Name" minlength="3"
                 required placeholder="Name (Required)">
               <input class="contact-form__input" type="email" name="Email"
                 required placeholder="Email (Required)">
               <input class="contact-form__input" type="text" name="Subject"
                 placeholder="Subject">
               <textarea class="contact-form__textarea" name="Description"
-                rows="50" cols="33"
+                rows="50" cols="33" minlength="25"
                 placeholder="Describe your project in detail..."></textarea>
               <input class="button button-submit" type="submit" value="Send">
             </form>
