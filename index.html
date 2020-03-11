@@ -46,6 +46,13 @@
               <img src="assets/images/iphone/body.png" alt="iphone">
               <div class="slider__phone_shadow"></div>
               <div class="phone-screen">
+                <div class="phone-screen__off">
+                  <span class="info">
+                    <span class="bounce bounce1">&#9660;</span>
+                    <span class="bounce bounce2">&#9660;</span>
+                    <span class="bounce bounce3">&#9660;</span>
+                  </span>
+                </div>
                 <div class="phone-screen__image-verical active" data-image="1">
                 </div>
                 <div class="phone-screen__image-verical" data-image="2"></div>
@@ -57,6 +64,8 @@
               <img src="assets/images/iphone/body.png" alt="iphone">
               <div class="slider__phone_shadow"></div>
               <div class="phone-screen">
+                <div class="phone-screen__off"><span class="info"><span
+                      class="bounce">&#9660;</span></span></div>
                 <div class="phone-screen__image-horizontal active"
                   data-image="1"></div>
                 <div class="phone-screen__image-horizontal" data-image="2">
@@ -67,6 +76,9 @@
         </div>
         <div class="slider__arrow">
           <button class="slider__arrow_right" data-direction="right"></button>
+        </div>
+        <div class="slider__item active" data-slide="1"></div>
+        <div class="slider__item" data-slide="2">
         </div>
       </section>
       <section class="our-services">
@@ -295,8 +307,8 @@
 
           <div class="base-layout layout-2column">
             <form class="contact-form" onsubmit="alert('Form submitted...');">
-              <input class="contact-form__input" type="text" name="Name" minlength="3"
-                required placeholder="Name (Required)">
+              <input class="contact-form__input" type="text" name="Name"
+                minlength="3" required placeholder="Name (Required)">
               <input class="contact-form__input" type="email" name="Email"
                 required placeholder="Email (Required)">
               <input class="contact-form__input" type="text" name="Subject"
