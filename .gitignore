@@ -2,4 +2,4 @@ psd/
 .gitignore
 node_modules
 singolo3
-.vscode/
+.vscode
