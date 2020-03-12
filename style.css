@@ -182,15 +182,20 @@ header {
 }
 
 .slider__arrow button:hover {
-  transform: scale(1.5);
-  -webkit-transform: scale(1.5);
-  -moz-transform: scale(1.5);
-  -ms-transform: scale(1.5);
-  -o-transform: scale(1.5);
+  transform: translateY(-2px) scale(1.2);
+  -webkit-transform: translateY(-2px) scale(1.2);
+  -moz-transform: translateY(-2px) scale(1.2);
+  -ms-transform: translateY(-2px) scale(1.2);
+  -o-transform: translateY(-2px) scale(1.2);
 }
 
-.slider__arrow button:focus {
+.slider__arrow button:active {
   outline: none;
+  transform: translateY(0) scale(1);
+  -webkit-transform: translateY(0) scale(1);
+  -moz-transform: translateY(0) scale(1);
+  -ms-transform: translateY(0) scale(1);
+  -o-transform: translateY(0) scale(1);
 }
 
 /*

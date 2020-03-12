@@ -304,6 +304,14 @@ span.info {
   -o-transition: all .5s ease-out;
 }
 
+img.apple {
+  width: 45px;
+  height: 45px;
+  transform: rotate(0) !important;
+  position: absolute;
+  bottom: 215px;
+}
+
 .move_right {
   display: block;
   animation: moveToRight 0.5s;

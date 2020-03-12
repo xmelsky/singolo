@@ -5,14 +5,12 @@ window.onload = function () {
 
   buttons.forEach( el => el.addEventListener( 'click', () => {
     slider.isScreenOn = !slider.isScreenOn;
-    console.log(slider);
     if ( !slider.isScreenOn ) {
-      screensOff.forEach(el => el.classList.add('switch-off'));
-      screensOff.forEach(el => el.classList.remove('switch-on'));
+      screensOff.forEach( el => el.classList.add( 'switch-off' ) );
+      screensOff.forEach( el => el.classList.remove( 'switch-on' ) );
     } else {
-      console.log('remove');
-      screensOff.forEach(el => el.classList.add('switch-on'));
-      screensOff.forEach(el => el.classList.remove('switch-off'));
+      screensOff.forEach( el => el.classList.add( 'switch-on' ) );
+      screensOff.forEach( el => el.classList.remove( 'switch-off' ) );
     }
   } ) );
 
@@ -70,14 +68,12 @@ class Slider {
     }
     this.images.map( removeActiveClasses );
     this.slides.map( removeActiveClasses );
-
     target.classList.remove( 'active' );
     target.removeEventListener( 'animationend', this.removeAllClases );
     this.isAnimation = false;
   };
 
   slide ( animIn ) {
-    this.isScreenOn && this.setActive();
     if ( this.isAnimation && !this.index >= 0 ) return;
 
     const animOut = animIn == 'right' ? 'left' : 'right';
@@ -97,22 +93,23 @@ class Slider {
           nextH = nextV + mid;
       }
 
-      const animateItem = ( slide ) => {
-        if ( slide.classList.contains( 'active' ) ) {
-          slide.classList.add( 'move_' + animOut );
-          slide.addEventListener( 'animationend', this.removeAllClases );
-        }
+      const animateItem = ( item ) => {
+        console.log( item );
+        if ( item.classList.contains( 'active' ) ) {
+          item.classList.add( 'move_' + animOut );
+          item.addEventListener( 'animationend', this.removeAllClases );
+        } else { console.log( 'else' ); }
       }
 
-      if ( this.isScreenOn ) {
-        this.images.forEach( animateItem );
-        this.images[nextV].classList.toggle( 'active' );
-        this.images[nextV].classList.toggle( 'move_from_' + animIn );
-        this.images[nextH].classList.toggle( 'active' );
-        this.images[nextH].classList.toggle( 'move_from_' + animIn );
-      }
 
+      this.images.forEach( animateItem );
       this.slides.forEach( animateItem );
+      this.images[nextV].classList.toggle( 'active' );
+      this.images[nextV].classList.toggle( 'move_from_' + animIn );
+      this.images[nextH].classList.toggle( 'active' );
+      this.images[nextH].classList.toggle( 'move_from_' + animIn );
+
+
 
       this.slides[nextV].classList.toggle( 'active' );
       this.slides[nextV].classList.toggle( 'move_from_' + animIn );
