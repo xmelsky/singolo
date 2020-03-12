@@ -112,16 +112,10 @@
   justify-content: center;
   align-items: flex-end;
   background: #1e1e1e;
-  z-index: 10;
+  z-index: 0;
 }
 
-span.info {
-  position: relative;
-  display: flex;
-  justify-content: center;
-  height: 45px;
-  width: 25px;
-}
+
 
 .slider__phone_vertical .phone-screen {
   left: 15px;
@@ -146,6 +140,14 @@ span.info {
   height: inherit;
 }
 
+.phone-screen__off.horizontal {
+  transform: rotate(90deg);
+  width: 188px;
+  height: 334px;
+  top: -73px;
+  left: 73px;
+}
+
 .phone-screen > .active {
   right: 0;
 }
@@ -165,6 +167,46 @@ span.info {
   background-position: -125px -119px;
   width: 333px;
   height: inherit;
+}
+
+.phone-button {
+  position: absolute;
+  bottom: 11px;
+  right: 88px;
+  width: 42px;
+  height: 43px;
+  background-image: url(../assets/images/iphone/button.png);
+  background: transparent;
+  z-index: 10;
+  border-radius: 21px;
+  -webkit-border-radius: 21px;
+  -moz-border-radius: 21px;
+  -ms-border-radius: 21px;
+  -o-border-radius: 21px;
+  cursor: pointer;
+}
+
+.slider__phone.slider__phone_horizontal .phone-button {
+  top: 208px;
+  left: -113px;
+}
+
+.phone-button:hover {
+  box-shadow: 1px 1px 5px #ccc;
+  transform: translateY(-2px);
+  -webkit-transform: translateY(-2px);
+  -moz-transform: translateY(-2px);
+  -ms-transform: translateY(-2px);
+  -o-transform: translateY(-2px);
+}
+
+.phone-button:active {
+  box-shadow: 0 0 2px #ccc;
+  transform: translateY(-1px);
+  -webkit-transform: translateY(-1px);
+  -moz-transform: translateY(-1px);
+  -ms-transform: translateY(-1px);
+  -o-transform: translateY(-1px);
 }
 
 .phone-screen__image-verical[data-image='1'] {
@@ -215,6 +257,53 @@ span.info {
   right: 14px;
 }
 
+span.info {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  height: 45px;
+  width: 25px;
+  opacity: 0;
+  transition: all .5s ease-out;
+  transition-delay: 2s;
+  -webkit-transition: all .5s ease-out;
+  -moz-transition: all .5s ease-out;
+  -ms-transition: all .5s ease-out;
+  -o-transition: all .5s ease-out;
+
+}
+
+.switch-off {
+  animation: switch-off;
+  -webkit-animation: switch-off;
+  animation-duration: 1s;
+  animation-fill-mode: backwards;
+  z-index: 10;
+  transition: all .5s ease-out;
+  -webkit-transition: all .5s ease-out;
+  -moz-transition: all .5s ease-out;
+  -ms-transition: all .5s ease-out;
+  -o-transition: all .5s ease-out;
+}
+
+.switch-off > .info {
+  opacity: 1;
+  animation: switch-on;
+  -webkit-animation: switch-on;
+  animation-duration: 1s;
+  animation-fill-mode: backwards;
+  animation-delay: 1.5s;
+}
+
+.switch-on {
+  opacity: 0;
+  transition: all .5s ease-out;
+  -webkit-transition: all .5s ease-out;
+  -moz-transition: all .5s ease-out;
+  -ms-transition: all .5s ease-out;
+  -o-transition: all .5s ease-out;
+}
+
 .move_right {
   display: block;
   animation: moveToRight 0.5s;
@@ -262,7 +351,7 @@ span.info {
   animation-timing-function: ease-out;
   animation-duration: 2s;
   animation-iteration-count:infinite;
-  animation-delay: 1.3s;
+  animation-delay: 1.27s;
 }
 
 .bounce3 {
@@ -314,22 +403,22 @@ span.info {
 
 @keyframes bounce1 {
   from {
-    opacity: 0;
-    top: 0;
+    opacity: 0.6;
+    top: -5%;
   }
   to {
-    opacity: 0.5;
+    opacity: 1;
     top: 140%;
   }
 }
 
 @keyframes bounce2 {
   from {
-    opacity: 0;
-    top: 0%;
+    opacity: 0.4;
+    top: -5%;
   }
   to {
-    opacity: 0.8;
+    opacity: 0.6;
     top: 120%;
   }
 }
@@ -337,10 +426,30 @@ span.info {
 @keyframes bounce3 {
   from {
     opacity: 0;
-    top: 0%;
+    top: -5%;
+  }
+  to {
+    opacity: 0.6;
+    top: 100%;
+  }
+}
+
+@keyframes switch-off {
+  from {
+    opacity: 0;
+
   }
   to {
     opacity: 1;
-    top: 100%;
+  }
+}
+
+@keyframes switch-on {
+  from {
+    opacity: 0;
+
+  }
+  to {
+    opacity: 1;
   }
 }

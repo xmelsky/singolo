@@ -1,5 +1,20 @@
 window.onload = function () {
   const sliderContainer = document.querySelector( '.slider' );
+  const buttons = document.querySelectorAll( '.phone-button' );
+  const screensOff = document.querySelectorAll( '.phone-screen__off' );
+
+  buttons.forEach( el => el.addEventListener( 'click', () => {
+    slider.isScreenOn = !slider.isScreenOn;
+    console.log(slider);
+    if ( !slider.isScreenOn ) {
+      screensOff.forEach(el => el.classList.add('switch-off'));
+      screensOff.forEach(el => el.classList.remove('switch-on'));
+    } else {
+      console.log('remove');
+      screensOff.forEach(el => el.classList.add('switch-on'));
+      screensOff.forEach(el => el.classList.remove('switch-off'));
+    }
+  } ) );
 
   sliderContainer.addEventListener( 'click', e => {
     e.stopPropagation();
@@ -27,7 +42,7 @@ window.onload = function () {
 
 class Slider {
   constructor() {
-    this.isScreenOn = false;
+    this.isScreenOn = true;
     this.images = [];
     this.slides = [];
     this.index = null;
@@ -89,13 +104,12 @@ class Slider {
         }
       }
 
-      if(this.isScreenOn) {
+      if ( this.isScreenOn ) {
         this.images.forEach( animateItem );
         this.images[nextV].classList.toggle( 'active' );
         this.images[nextV].classList.toggle( 'move_from_' + animIn );
         this.images[nextH].classList.toggle( 'active' );
         this.images[nextH].classList.toggle( 'move_from_' + animIn );
-
       }
 
       this.slides.forEach( animateItem );
