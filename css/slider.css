@@ -314,26 +314,26 @@ img.apple {
 
 .move_right {
   display: block;
-  animation: moveToRight 0.5s;
-  -webkit-animation: moveToRight 0.5s;
+  animation: moveToRight 1.5s;
+  -webkit-animation: moveToRight 1.5s;
 }
 
 .move_left {
   display: block;
-  animation: moveToLeft 0.5s;
-  -webkit-animation: moveToLeft 0.5s;
+  animation: moveToLeft 1.5s;
+  -webkit-animation: moveToLeft 1.5s;
 }
 
 .move_from_right {
   display: block;
-  animation: moveFromRight 0.5s;
-  -webkit-animation: moveFromRight 0.5s;
+  animation: moveFromRight 1.5s;
+  -webkit-animation: moveFromRight 1.5s;
 }
 
 .move_from_left {
   display: block;
-  animation: moveFromLeft 0.5s;
-  -webkit-animation: moveFromLeft 0.5s;
+  animation: moveFromLeft 1.5s;
+  -webkit-animation: moveFromLeft 1.5s;
 }
 
 .bounce {

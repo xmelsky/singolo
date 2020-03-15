@@ -1,44 +1,18 @@
-window.onload = function () {
-  const sliderContainer = document.querySelector( '.slider' );
-  const buttons = document.querySelectorAll( '.phone-button' );
-  const screensOff = document.querySelectorAll( '.phone-screen__off' );
+const buttons = document.querySelectorAll( '.phone-button' );
+const screensOff = document.querySelectorAll( '.phone-screen__off' );
 
-  buttons.forEach( el => el.addEventListener( 'click', () => {
+buttons.forEach( el => el.addEventListener( 'click', () => {
     slider.isScreenOn = !slider.isScreenOn;
-    if ( !slider.isScreenOn ) {
-      screensOff.forEach( el => el.classList.add( 'switch-off' ) );
-      screensOff.forEach( el => el.classList.remove( 'switch-on' ) );
-    } else {
-      screensOff.forEach( el => el.classList.add( 'switch-on' ) );
-      screensOff.forEach( el => el.classList.remove( 'switch-off' ) );
-    }
-  } ) );
+  if ( !slider.isScreenOn ) {
+    screensOff.forEach( el => el.classList.add( 'switch-off' ) );
+    screensOff.forEach( el => el.classList.remove( 'switch-on' ) );
+  } else {
+    screensOff.forEach( el => el.classList.add( 'switch-on' ) );
+    screensOff.forEach( el => el.classList.remove( 'switch-off' ) );
+  }
+} ) );
 
-  sliderContainer.addEventListener( 'click', e => {
-    e.stopPropagation();
-    if ( e.target.tagName === 'BUTTON' ) {
-      switch ( true ) {
-        case e.target.dataset.direction == 'left':
-          slider.slide( 'left' );
-          break;
-        case e.target.dataset.direction == 'right':
-          slider.slide( 'right' );
-          break;
-        default:
-      }
-    }
-  } );
-
-  document.addEventListener( 'keyup', e => {
-    if ( e.keyCode === 37 ) slider.slide( 'left' );
-    else if ( e.keyCode === 39 ) slider.slide( 'right' );
-  } );
-
-  const slider = new Slider();
-  slider.getImages();
-};
-
-class Slider {
+ export class Slider {
   constructor() {
     this.isScreenOn = true;
     this.images = [];
@@ -94,13 +68,11 @@ class Slider {
       }
 
       const animateItem = ( item ) => {
-        console.log( item );
         if ( item.classList.contains( 'active' ) ) {
           item.classList.add( 'move_' + animOut );
           item.addEventListener( 'animationend', this.removeAllClases );
-        } else { console.log( 'else' ); }
+        }
       }
-
 
       this.images.forEach( animateItem );
       this.slides.forEach( animateItem );
