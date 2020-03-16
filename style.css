@@ -43,6 +43,7 @@ input:-webkit-autofill {
 }
 
 body {
+  position: relative;
   font-family: 'Lato-Regular', Arial, sans-serif;
 }
 
@@ -90,6 +91,12 @@ header.sticky {
   top: -100px;
   z-index: 999;
   border-bottom: none;
+  transition: top .4s ease-in-out;
+  -webkit-transition: top .4s ease-in-out;
+  -moz-transition: top .4s ease-in-out;
+  -ms-transition: top .4s ease-in-out;
+  -o-transition: top .4s ease-in-out;
+  opacity: 0;
 }
 
 header.sticky .logo {
@@ -106,7 +113,7 @@ header.sticky .menu {
 }
 
 header.up {
-
+  opacity: 1;
   top: 0;
 }
 
@@ -526,8 +533,8 @@ header.sticky ~ main {
   overflow: hidden;
 }
 
-.section-content__item {
-  margin-bottom: 15px;
+.section-content.gallery {
+  overflow: visible;
 }
 
 .portfolio .section-content__item {
@@ -535,8 +542,38 @@ header.sticky ~ main {
   overflow: hidden;
   width: 220px;
   height: 187px;
-  margin-bottom: 20px;
+  margin-top: 20px;
+  transition: all .3s ease-in;
+  -webkit-transition: all .3s ease-in;
+  -moz-transition: all .3s ease-in;
+  -ms-transition: all .3s ease-in;
+  -o-transition: all .3s ease-in;
+  box-shadow: none;
 }
+
+.section-content__item.hidden {
+  transform: scale(0);
+  -webkit-transform: scale(0);
+  -moz-transform: scale(0);
+  -ms-transform: scale(0);
+  -o-transform: scale(0);
+  opacity: 0;
+}
+
+.section-content__item:nth-child(-n+4) {
+  margin-top: 0;
+}
+
+.section-content__item:nth-child(n+13) {
+  display: none;
+}
+
+.section-content__item:empty {
+  height: 0;
+  border: none;
+  margin: 0;
+}
+
 
 [data-imageName='birds'] {
   top: -32px;
@@ -651,7 +688,10 @@ header.sticky ~ main {
   -moz-border-radius: 4px;
   -ms-border-radius: 4px;
   -o-border-radius: 4px;
-  -webkit-text-stroke: 0.4px;
+}
+
+.filter-buttons button:focus {
+  outline: none;
 }
 
 .filter-buttons li:first-child button {
@@ -694,6 +734,10 @@ header.sticky ~ main {
 
 .section-content li:nth-child(1) .description-subtitle:first-line {
   font-size: 11px;
+}
+
+li.section-content__item.active {
+  box-shadow: 0 0 0 5px #F06C64;
 }
 
 .social {
@@ -860,6 +904,10 @@ path.contacts-icon {
   fill: #f0d8d9;
 }
 
+form * {
+  font-family: Lato-Regular;
+}
+
 .contact-form {
   position: relative;
   background-color: #f06c64;
@@ -881,6 +929,10 @@ path.contacts-icon {
   -o-border-radius: 5px;
   color: rgb(245, 245, 245);
   background-color: #d6564f;
+}
+
+.contact-form__input:active:invalid {
+  border: 1px solid #fff;
 }
 
 .contact-form__input:hover,
@@ -912,15 +964,20 @@ path.contacts-icon {
 .button-submit {
   position: absolute;
   top: 100%;
-  right: 0;
-  padding: 12px 40px;
+  left: 0;
+  width: 136px;
+  height: 38px;
+  padding: 11px 40px;
   border-radius: 5px;
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
   -ms-border-radius: 5px;
   -o-border-radius: 5px;
-  color: #f48c8f;
-  background-color: #d6564f;
+  font-size: 14px;
+  line-height: 17px;
+  text-transform: uppercase;
+  color: #886A30;
+  background-color: #FBC65F;
   border: 1px solid #f48c8f;
   transition: all 0.3s ease-in;
   -webkit-transition: all 0.3s ease-in;
@@ -928,7 +985,6 @@ path.contacts-icon {
   -ms-transition: all 0.3s ease-in;
   -o-transition: all 0.3s ease-in;
 }
-
 .button-submit:hover {
   cursor: pointer;
   color: #fff;

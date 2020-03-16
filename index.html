@@ -30,7 +30,7 @@
           <li class="menu__item"><a href="portfolio" class="menu__link">Portfolio</a>
           </li>
           <li class="menu__item"><a href="about" class="menu__link">About</a></li>
-          <li class="menu__item"><a href="getQuote" class="menu__link">Contact</a></li>
+          <li class="menu__item"><a href="get-quote" class="menu__link">Contact</a></li>
         </ul>
       </nav>
     </header>
@@ -160,81 +160,81 @@
             eget lacinia odio sem nec elit.
           </p>
           <ul class="filter-buttons">
-            <li class="filter-buttons__item">
+            <li class="filter-buttons__item" data-group="all">
               <button class="active">All</button>
             </li>
-            <li class="filter-buttons__item">
+            <li class="filter-buttons__item" data-group="web">
               <button>Web design</button>
             </li>
-            <li class="filter-buttons__item">
+            <li class="filter-buttons__item" data-group="graphic">
               <button>Graphic design</button>
             </li>
-            <li class="filter-buttons__item">
+            <li class="filter-buttons__item" data-group="art">
               <button>Artwork</button>
             </li>
           </ul>
-          <ul class="section-content">
-            <li class="section-content__item"><a href="#" target="_blank"
+          <ul class="section-content gallery">
+            <li class="section-content__item" data-group="web"><a href="#" target="_blank"
                 rel="noopener noreferrer">
                 <img src="assets/images/portfolio/ship.png"
                   data-imageName="ship" alt="ship"></a>
             </li>
-            <li class="section-content__item"><a href="#" target="_blank"
+            <li class="section-content__item" data-group="art"><a href="#" target="_blank"
                 rel="noopener noreferrer">
                 <img src="assets/images/portfolio/smiling-girl.png"
                   data-imageName="smile-girl" alt="smile girl"></a>
             </li>
-            <li class="section-content__item"><a href="#" target="_blank"
+            <li class="section-content__item" data-group="art"><a href="#" target="_blank"
                 rel="noopener noreferrer">
                 <img src="assets/images/portfolio/night-city.png"
                   data-imageName="night-city" alt="night-city"></a>
             </li>
-            <li class="section-content__item"><a href="#" target="_blank"
+            <li class="section-content__item" data-group="graphic"><a href="#" target="_blank"
                 rel="noopener noreferrer">
                 <img src="assets/images/portfolio/robot.png"
                   data-imageName="robot" alt="robot"></a>
             </li>
-            <li class="section-content__item"><a href="#" target="_blank"
+            <li class="section-content__item" data-group="art"><a href="#" target="_blank"
                 rel="noopener noreferrer">
                 <img src="assets/images/portfolio/funny-kids.png"
                   data-imageName="funny-kids" alt="funny-kids"></a>
             </li>
-            <li class="section-content__item"><a href="#" target="_blank"
+            <li class="section-content__item" data-group="graphic"><a href="#" target="_blank"
                 rel="noopener noreferrer">
                 <img src="assets/images/portfolio/web-tools.png"
                   data-imageName="web-tools" alt="web-tools"></a>
             </li>
-            <li class="section-content__item"><a href="#" target="_blank"
+            <li class="section-content__item" data-group="web"><a href="#" target="_blank"
                 rel="noopener noreferrer">
                 <img src="assets/images/portfolio/robo-kids.png"
                   data-imageName="robo-kids" alt="robo-kids"></a>
             </li>
-            <li class="section-content__item"><a href="#" target="_blank"
+            <li class="section-content__item" data-group="art"><a href="#" target="_blank"
                 rel="noopener noreferrer">
                 <img src="assets/images/portfolio/birds.png"
                   data-imageName="birds" alt="birds"></a>
             </li>
-            <li class="section-content__item"><a href="#" target="_blank"
+            <li class="section-content__item" data-group="web"><a href="#" target="_blank"
                 rel="noopener noreferrer">
                 <img src="assets/images/portfolio/sllepy-monster.png"
                   data-imageName="sllepy-monster" alt="sllepy-monster"></a>
             </li>
-            <li class="section-content__item"><a href="#" target="_blank"
+            <li class="section-content__item" data-group="graphic"><a href="#" target="_blank"
                 rel="noopener noreferrer">
                 <img src="assets/images/portfolio/words.png"
                   data-imageName="words" alt="words"></a>
             </li>
-            <li class="section-content__item"><a href="#" target="_blank"
+            <li class="section-content__item" data-group="web"><a href="#" target="_blank"
                 rel="noopener noreferrer">
                 <img src="assets/images/portfolio/monster.png"
                   data-imageName="monster" alt="monster"></a>
             </li>
-            <li class="section-content__item"><a href="#" target="_blank"
+            <li class="section-content__item" data-group="web"><a href="#" target="_blank"
                 rel="noopener noreferrer">
                 <img src="assets/images/portfolio/broken-photo.png"
                   data-imageName="broken-photo" alt="broken photo"></a>
             </li>
-            <li class="section-content__item"><a href="#" target="_blank"
+            <li class="section-content__item" data-group="art"><a href="#" target="_blank"
                 rel="noopener noreferrer">
                 <img src="assets/images/portfolio/extra-img.png"
                   alt="Project 13 photo"></a>
@@ -304,7 +304,7 @@
         </div>
 
       </section>
-      <section class="main-wrapper getQuote">
+      <section class="main-wrapper get-quote">
         <div class="content-wrapper getQuote">
           <h2 class="content-wrapper__title">Get <small>a</small> Quote</h2>
           <p class="content-wrapper__subtite">Fusce dapibus, tellus ac cursus
@@ -317,13 +317,13 @@
           <div class="base-layout layout-2column">
             <form class="contact-form" onsubmit="alert('Form submitted...');">
               <input class="contact-form__input" type="text" name="Name"
-                minlength="3" required placeholder="Name (Required)">
-              <input class="contact-form__input" type="email" name="Email"
-                required placeholder="Email (Required)">
+                minlength="3" maxlength="15" required placeholder="Name (Required)" pattern="[a-zA-Z\s]*">
+              <input class="contact-form__input" type="email" name="Email" maxlength="30"
+                required placeholder="Email (Required)" pattern="^[A-Za-z0-9._%+-]+@(?:[A-Za-z0-9-]+\.)+[A-Za-z]{2,10}$">
               <input class="contact-form__input" type="text" name="Subject"
                 placeholder="Subject">
               <textarea class="contact-form__textarea" name="Description"
-                rows="50" cols="33" minlength="25"
+                rows="50" cols="33" minlength="5"
                 placeholder="Describe your project in detail..."></textarea>
               <input class="button button-submit" type="submit" value="Send">
             </form>
