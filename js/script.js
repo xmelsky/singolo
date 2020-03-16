@@ -9,7 +9,7 @@ const menu = document.querySelector('.menu');
 const filter = document.querySelector('.filter-buttons');
 const gallery = document.querySelector('.gallery');
 
-activeLinkHandler(menu, 'A');
+activeLinkHandler(menu, false);
 activeLinkHandler(filter, 'BUTTON', undefined, () => manageGalleryImages(gallery, 'LI'));
 activeLinkHandler(gallery, 'IMG', 'LI');
 
@@ -95,6 +95,7 @@ function manageGalleryImages(element, link) {
   }
   randomizedArr.forEach(elem => {
     elem.classList.add('hidden');
+    elem.classList.remove('active');
     setTimeout(()=> {
       element.appendChild(elem);
       setTimeout(()=>  elem.classList.remove('hidden'),150);
@@ -124,12 +125,35 @@ function stickyHeader(e) {
   }
   // Manage active links during scroll event
   scrollPosition = window.scrollY;
-  menu.querySelectorAll('a.menu__link').forEach(link => {
-      let section = document.querySelector(`.${link.getAttribute('href')}`);
-    if (section.offsetTop  <= scrollPosition + 200 &&  section.offsetTop + section.offsetHeight > scrollPosition + 200) {
-        menu.querySelector('a.active').classList.remove('active')
-        link.classList.add('active');
-    }
+  // menu.querySelectorAll('a.menu__link').forEach(link => {
+  //     let section = document.querySelector(`.${link.getAttribute('href')}`);
+  //   if (section.offsetTop  <= scrollPosition + 200 &&  section.offsetTop + section.offsetHeight > scrollPosition + 200) {
+  //       menu.querySelector('a.active').classList.remove('active')
+  //       link.classList.add('active');
+  //   }
 
-  });
+  // });
+}
+
+// Use intersectionObserver API instead of window scroll calculations due to perfomance
+
+let options = {
+  root: null,
+  rootMargin: "-40% 5%",
+  threshold: 0.01
+}
+
+const linkObserver = new IntersectionObserver(intersectionHandler, options);
+document.querySelectorAll('[data-observe]').forEach(element => {
+  linkObserver.observe(element);
+});
+
+function intersectionHandler(entries) {
+
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      menu.querySelector(`.active`).classList.remove('active');
+      menu.querySelector(`[data-link=${entry.target.dataset.observe}]`).classList.add('active');
+    }
+  })
 }
