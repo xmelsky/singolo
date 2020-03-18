@@ -33,13 +33,21 @@ textarea {
 
 input:-webkit-autofill {
   box-shadow: none !important;
-  -webkit-text-fill-color: #f48c8f !important;
   -webkit-box-shadow: 0 0 0px 1000px #d6564f inset !important;
-  transition: all 0.3s ease-in-out 0.5s !important;
-  -webkit-transition: all 0.3s ease-in-out 0.5s !important;
-  -moz-transition: all 0.3s ease-in-out 0.5s !important;
-  -ms-transition: all 0.3s ease-in-out 0.5s !important;
-  -o-transition: all 0.3s ease-in-out 0.5s !important;
+}
+
+:-webkit-autofill {
+  box-shadow: none !important;
+  -webkit-box-shadow: 0 0 0px 1000px #d6564f inset !important;
+  transition: all 0.3s ease-in-out 0.2s !important;
+  -webkit-transition: all 0.3s ease-in-out 0.2s !important;
+  -moz-transition: all 0.3s ease-in-out 0.2s !important;
+  -ms-transition: all 0.3s ease-in-out 0.2s !important;
+  -o-transition: all 0.3s ease-in-out 0.2s !important;
+}
+
+:-webkit-autofill {
+  -webkit-text-fill-color: rgb(245, 245, 245) !important;
 }
 
 body {
@@ -208,7 +216,7 @@ header.sticky ~ main {
   display: flex;
   flex-wrap: nowrap;
   background-color: #f06c64;
-  border-bottom: 6px solid #ea676b;
+
   min-height: 600px;
 }
 
@@ -522,7 +530,7 @@ header.sticky ~ main {
 
 .about .content-wrapper {
   border-bottom: 5px solid #fff;
-  padding: 60px 40px 52px;
+  padding: 60px 40px 67px;
 }
 
 .section-content {
@@ -560,11 +568,11 @@ header.sticky ~ main {
   opacity: 0;
 }
 
-.section-content__item:nth-child(-n+4) {
+.section-content__item:nth-child(-n + 4) {
   margin-top: 0;
 }
 
-.section-content__item:nth-child(n+13) {
+.section-content__item:nth-child(n + 13) {
   display: none;
 }
 
@@ -573,7 +581,6 @@ header.sticky ~ main {
   border: none;
   margin: 0;
 }
-
 
 [data-imageName='birds'] {
   top: -32px;
@@ -737,7 +744,7 @@ header.sticky ~ main {
 }
 
 li.section-content__item.active {
-  box-shadow: 0 0 0 5px #F06C64;
+  box-shadow: 0 0 0 5px #f06c64;
 }
 
 .social {
@@ -913,6 +920,7 @@ form * {
   background-color: #f06c64;
   max-width: 619px;
   flex-grow: 1;
+  margin-bottom: 6px;
 }
 
 .contact-form__input,
@@ -929,15 +937,29 @@ form * {
   -o-border-radius: 5px;
   color: rgb(245, 245, 245);
   background-color: #d6564f;
+  border: 1px solid #f48c8f;
+  box-sizing: border-box;
+  transition: all 0.3s ease-in-out 0.2s !important;
+  -webkit-transition: all 0.3s ease-in-out 0.2s !important;
+  -moz-transition: all 0.3s ease-in-out 0.2s !important;
+  -ms-transition: all 0.3s ease-in-out 0.2s !important;
+  -o-transition: all 0.3s ease-in-out 0.2s !important;
 }
 
 .contact-form__input:active:invalid {
-  border: 1px solid #fff;
+  border: 1px solid rgb(245, 245, 245);
+}
+
+.contact-form__input:focus,
+.contact-form__textarea:focus {
+  outline: none;
+  border: 1px solid rgb(245, 245, 245);
+  box-shadow: 0 0 5px coral;
 }
 
 .contact-form__input:hover,
 .contact-form__textarea:hover {
-  border: 1px solid #f48c8f;
+  border: 1px solid rgb(245, 245, 245);
 }
 
 .contact-form__input:nth-child(4)::placeholder,
@@ -954,17 +976,19 @@ form * {
 }
 
 .contact-form__textarea {
-  height: 202px;
+  height: 158px;
   resize: none;
   font-size: 12px;
-  line-height: 3.1em;
+  line-height: 16px;
+  padding: 7px 15px;
   letter-spacing: -0.01px;
 }
 
+.contact-form__textarea::placeholder {
+  line-height: 18px;
+}
+
 .button-submit {
-  position: absolute;
-  top: 100%;
-  left: 0;
   width: 136px;
   height: 38px;
   padding: 11px 40px;
@@ -976,8 +1000,8 @@ form * {
   font-size: 14px;
   line-height: 17px;
   text-transform: uppercase;
-  color: #886A30;
-  background-color: #FBC65F;
+  color: #886a30;
+  background-color: #fbc65f;
   border: 1px solid #f48c8f;
   transition: all 0.3s ease-in;
   -webkit-transition: all 0.3s ease-in;
@@ -996,6 +1020,7 @@ form * {
   justify-content: space-between;
   width: 153px;
   margin-top: 0;
+  align-self: center;
 }
 
 .section-content li:first-child .social .linkedin {
@@ -1009,9 +1034,9 @@ form * {
 
 .footer .layout-col-2 {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
-  padding: 21px 39px 15px 14px;
+  padding: 21px 14px 15px 14px;
 }
 
 .footer .content-wrapper {
@@ -1019,6 +1044,7 @@ form * {
 }
 
 .copyright {
+  display: none !important;
   font-size: 12px;
   display: block;
   text-align: center;
