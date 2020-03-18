@@ -10,7 +10,12 @@ export class tabs {
 
 export const activeLinkHandler = (element, link, parent, cb) => {
     element.addEventListener('click', (e) => {
-
+      if (!link) {
+        e.preventDefault();
+        const target = e.target.getAttribute('href');
+        if(target) target == 'home' ? scroll.scrollToTop() : scroll.smooth(e.target.getAttribute('href'));
+        return;
+      }
       if (e.target.tagName === link) {
           e.preventDefault();
           const activeElement = element.querySelector((parent || link) + '.active') || element.querySelector((parent || link));
