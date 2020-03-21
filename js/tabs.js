@@ -12,8 +12,9 @@ export const activeLinkHandler = (element, link, parent, cb) => {
     element.addEventListener('click', (e) => {
       if (!link) {
         e.preventDefault();
-        const target = e.target.getAttribute('href');
-        if(target) target == 'home' ? scroll.scrollToTop() : scroll.smooth(e.target.getAttribute('href'));
+        const className = e.target.getAttribute('href');
+        const element =  document.querySelector('.' + className);
+        if(className) scroll.scrollSmooth(element);
         return;
       }
       if (e.target.tagName === link) {
@@ -30,8 +31,8 @@ export const activeLinkHandler = (element, link, parent, cb) => {
           }
 
           //ScrollTo handler when click on menu
-          const target = e.target.getAttribute('href');
-          if(target) target == 'home' ? scroll.scrollToTop() : scroll.smooth(e.target.getAttribute('href'));
+          // const target = e.target.getAttribute('href');
+          // if(target) target == 'home' ? scroll.scrollToTop() : scroll.smooth(e.target.getAttribute('href'));
 
           if ( typeof cb === 'function') cb();
         }

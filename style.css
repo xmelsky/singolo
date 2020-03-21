@@ -554,18 +554,19 @@ header.sticky ~ main.sustain-header {
   overflow: visible;
 }
 
-.gallery-content__item {
+li.gallery-content__item {
   position: relative;
   overflow: hidden;
   width: 220px;
   height: 187px;
   margin-top: 20px;
+  box-shadow: 0 0 0 5px transparent;
   transition: box-shadow .3s ease-in, transform .3s ease-in, opacity .3s ease-in;
   -webkit-transition: box-shadow .3s ease-in, transform .3s ease-in, opacity .3s ease-in;
   -moz-transition: box-shadow .3s ease-in, transform .3s ease-in, opacity .3s ease-in;
   -ms-transition: box-shadow .3s ease-in, transform .3s ease-in, opacity .3s ease-in;
   -o-transition: box-shadow .3s ease-in, transform .3s ease-in, opacity .3s ease-in;
-  box-shadow: none;
+
 }
 
 .gallery-content__item.hidden {

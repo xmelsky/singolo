@@ -121,7 +121,7 @@ function stickyHeader(e) {
   // Set header state
   if (window.pageYOffset > headerPosition + 50) {
     header.classList.add("sticky");
-    if(scrollPosition > window.scrollY && scrollPosition > headerPosition + 200){
+    if(window.pageYOffset > headerPosition + 150){
         header.classList.add("up");
     } else {
         header.classList.remove("up");
@@ -134,8 +134,13 @@ function stickyHeader(e) {
   menu.querySelectorAll('a.menu__link').forEach(link => {
       let section = document.querySelector(`.${link.getAttribute('href')}`);
     if (section.offsetTop  <= scrollPosition + 200 &&  section.offsetTop + section.offsetHeight > scrollPosition + 200) {
-        menu.querySelector('a.active').classList.remove('active')
+      menu.querySelector('a.active').classList.remove('active')
+      if(Math.ceil(window.pageYOffset + window.innerHeight) >= document.documentElement.scrollHeight) {
+        menu.lastElementChild.lastElementChild.classList.add('active');
+      }else{
         link.classList.add('active');
+      }
+
     }
 
   });
