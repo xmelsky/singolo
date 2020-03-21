@@ -112,16 +112,17 @@ function manageGalleryImages(element, link) {
 // Set function to manage Header states: sticky, up, relative
 
 const header = document.querySelector( 'header' );
+const loadBar = document.querySelector('.scroll-progress');
 const headerPosition = header.offsetTop + header.offsetHeight;
-window.onscroll = (e) => stickyHeader(e);
 let scrollPosition = window.scrollY;
+window.onscroll = (e) => stickyHeader(e);
 
 
 function stickyHeader(e) {
   // Set header state
-  if (window.pageYOffset > headerPosition + 50) {
+  if (window.pageYOffset > headerPosition + 25) {
     header.classList.add("sticky");
-    if(window.pageYOffset > headerPosition + 150){
+    if(window.pageYOffset > headerPosition + 50){
         header.classList.add("up");
     } else {
         header.classList.remove("up");
@@ -133,7 +134,7 @@ function stickyHeader(e) {
   scrollPosition = window.scrollY;
   menu.querySelectorAll('a.menu__link').forEach(link => {
       let section = document.querySelector(`.${link.getAttribute('href')}`);
-    if (section.offsetTop  <= scrollPosition + 200 &&  section.offsetTop + section.offsetHeight > scrollPosition + 200) {
+    if (section.offsetTop  <= scrollPosition + 250 &&  section.offsetTop + section.offsetHeight > scrollPosition + 250) {
       menu.querySelector('a.active').classList.remove('active')
       if(Math.ceil(window.pageYOffset + window.innerHeight) >= document.documentElement.scrollHeight) {
         menu.lastElementChild.lastElementChild.classList.add('active');
@@ -144,27 +145,36 @@ function stickyHeader(e) {
     }
 
   });
+
+  // Scroll status bar
+  const initialWidth = parseInt(window.getComputedStyle(header).getPropertyValue('width'));
+  const scrollBase = document.documentElement.scrollHeight - window.innerHeight;
+  const percentWidth = (scrollBase - Math.ceil(window.pageYOffset)) / scrollBase;
+  loadBar.style.width = initialWidth * ( 1 - percentWidth) + 'px';
 }
 
-// Use intersectionObserver API instead of window scroll calculations due to perfomance
+// if (window.screen.availWidth- (window.screen.availWidth - window.innerWidth) >  1366 ) {
+// // Use intersectionObserver API instead of window scroll calculations due to perfomance
 
-// let options = {
-//   root: null,
-//   rootMargin: "-40% 5%",
-//   threshold: 0.01
-// }
+//   let options = {
+//     root: null,
+//     rootMargin: "-40% 5%",
+//     threshold: 0.01
+//   }
 
-// const linkObserver = new IntersectionObserver(intersectionHandler, options);
-// document.querySelectorAll('[data-observe]').forEach(element => {
-//   linkObserver.observe(element);
-// });
+//   const linkObserver = new IntersectionObserver(intersectionHandler, options);
+//   document.querySelectorAll('[data-observe]').forEach(element => {
+//     linkObserver.observe(element);
+//   });
 
-// function intersectionHandler(entries) {
+//   function intersectionHandler(entries) {
 
-//   entries.forEach(entry => {
-//     if (entry.isIntersecting) {
-//       menu.querySelector(`.active`).classList.remove('active');
-//       menu.querySelector(`[data-link=${entry.target.dataset.observe}]`).classList.add('active');
-//     }
-//   })
-// }
+//     entries.forEach(entry => {
+//       if (entry.isIntersecting) {
+//         menu.querySelector(`.active`).classList.remove('active');
+//         menu.querySelector(`[data-link=${entry.target.dataset.observe}]`).classList.add('active');
+//       }
+//     })
+//   }
+// } else {}
+

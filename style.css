@@ -125,6 +125,10 @@ header.up {
   top: 0;
 }
 
+header.up .loader__bar {
+
+}
+
 .sustain-header {
   height: 0;
 }
@@ -1062,7 +1066,7 @@ form * {
 
 .footer .layout-col-2 {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
   padding: 21px 14px 15px 14px;
 }
@@ -1072,9 +1076,28 @@ form * {
 }
 
 .copyright {
-  display: none !important;
   font-size: 12px;
   display: block;
   text-align: center;
   width: 146px;
+}
+
+.loader {
+  position: absolute;
+  bottom: 0;
+  left: 0;;
+  height: 2px;
+  width: 100%;
+  padding-bottom: 4px;
+}
+
+.scroll-progress {
+  background: red;
+  height: 2px;
+  width: 0;
+  transition: width .05scroll-progresss ease-in-out;
+  -webkit-transition: width .05s ease-in-out;
+  -moz-transition: width .05s ease-in-out;
+  -ms-transition: width .05s ease-in-out;
+  -o-transition: width .05s ease-in-out;
 }
