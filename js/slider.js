@@ -1,6 +1,5 @@
  export class Slider {
   constructor() {
-    this.isScreenOn = true;
     this.images = [];
     this.slides = [];
     this.index = null;

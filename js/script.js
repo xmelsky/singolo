@@ -47,17 +47,10 @@ form.onsubmit = (e) => formHandler.validate(e);
 
 const sliderContainer = document.querySelector( '.slider' );
 const buttons = document.querySelectorAll( '.phone-button' );
-const screensOff = document.querySelectorAll( '.phone-screen__off' );
 
 buttons.forEach( el => el.addEventListener( 'click', () => {
-    slider.isScreenOn = !slider.isScreenOn;
-  if ( !slider.isScreenOn ) {
-    screensOff.forEach( el => el.classList.add( 'switch-off' ) );
-    screensOff.forEach( el => el.classList.remove( 'switch-on' ) );
-  } else {
-    screensOff.forEach( el => el.classList.add( 'switch-on' ) );
-    screensOff.forEach( el => el.classList.remove( 'switch-off' ) );
-  }
+    el.nextElementSibling.firstElementChild.classList.toggle( 'switch-on' );
+    el.nextElementSibling.firstElementChild.classList.toggle( 'switch-off' );
 } ) );
 
 // Initialize slider
