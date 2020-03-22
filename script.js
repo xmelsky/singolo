@@ -1,7 +1,7 @@
-import {Slider} from './slider.js';
-import {FormHandler} from './formHandler.js';
-import {activeLinkHandler} from './tabs.js';
-import {DragAndDrop} from './dragAndDropHandler.js';
+import {Slider} from './js/slider.js';
+import {FormHandler} from './js/formHandler.js';
+import {activeLinkHandler} from './js/tabs.js';
+import {DragAndDrop} from './js/dragAndDropHandler.js';
 
 // Set handlers to set active element after click
 
