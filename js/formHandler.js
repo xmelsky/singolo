@@ -1,17 +1,16 @@
 export class FormHandler {
-  constructor(
-    form,
-    { messageOk = 'Message sent', closeButton = 'OK', fields = [] }
+  constructor(form, { messageOk = 'Message sent', closeButton = 'OK', fields = [] }
   ) {
-    (this.form = form),
-      (this.messageOk = messageOk),
-      (this.closeButton = closeButton),
-      (this.fields = fields.filter((el) => el.add));
+    this.form = form,
+    this.messageOk = messageOk,
+    this.closeButton = closeButton,
+    this.fields = fields.filter((el) => el.add);
   }
 
   validate = (e) => {
     e.preventDefault();
-    this.showModal();
+    if(this.isModal) return;
+    else this.showModal();
   };
 
   sanitizeInput = (field) => {
@@ -20,6 +19,7 @@ export class FormHandler {
   };
 
   showModal() {
+    this.isModal = true;
     const overlay = document.createElement('div');
     overlay.setAttribute('style', overlayStyles);
     const modal = document.createElement('div');
@@ -35,8 +35,10 @@ export class FormHandler {
     close.innerText = this.closeButton;
     close.setAttribute('style', closeStyles);
 
-    close.onclick = () =>
+    close.onclick = () => {
+      this.isModal = false;
       overlay.remove() || style.remove() || this.form.reset();
+    }
 
     modal.innerHTML = `<p><h3>${this.messageOk}</h3></p>`;
 

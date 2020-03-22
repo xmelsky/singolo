@@ -5,6 +5,8 @@ import {DragAndDrop} from './js/dragAndDropHandler.js';
 
 // Set handlers to set active element after click
 
+
+
 const menu = document.querySelector('.menu');
 const filter = document.querySelector('.filter-buttons');
 const gallery = document.querySelector('.gallery');
@@ -109,7 +111,7 @@ const loadBar = document.querySelector('.scroll-progress');
 const headerPosition = header.offsetTop + header.offsetHeight;
 let scrollPosition = window.scrollY;
 window.onscroll = (e) => stickyHeader(e);
-
+window.onload = stickyHeader();
 
 function stickyHeader(e) {
   // Set header state
