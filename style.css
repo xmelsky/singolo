@@ -1095,7 +1095,7 @@ form * {
   background: red;
   height: 2px;
   width: 0;
-  transition: width .05scroll-progresss ease-in-out;
+  transition: width .05s ease-in-out;
   -webkit-transition: width .05s ease-in-out;
   -moz-transition: width .05s ease-in-out;
   -ms-transition: width .05s ease-in-out;
