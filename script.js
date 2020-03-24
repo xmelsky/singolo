@@ -110,7 +110,7 @@ const header = document.querySelector( 'header' );
 const loadBar = document.querySelector('.scroll-progress');
 const headerPosition = header.offsetTop + header.offsetHeight;
 let scrollPosition = window.scrollY;
-window.onscroll = (e) => stickyHeader(e);
+window.onscroll = () => stickyHeader();
 window.onload = stickyHeader();
 
 function stickyHeader(e) {
