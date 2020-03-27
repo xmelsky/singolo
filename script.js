@@ -158,14 +158,14 @@ function adjustSliderScale(){
   const vw1020 = window.matchMedia('(min-width: 769px) and (max-width: 1020px)');
   const vw768 = window.matchMedia('(min-width: 376px) and (max-width: 768px)');
   const vw375 = window.matchMedia('(max-width: 375px)');
-  const phoneBody = document.querySelectorAll('.slider__phone_body');
+  const phoneBody = document.querySelectorAll('.slider__phone');
 
   if (vw1020.matches) {
     const scale = (1020 - document.documentElement.clientWidth) / 1000;
     phoneBody.forEach(el => el.style.transform = `scale(${ 1 -  scale }`);
     console.log('1020');
   } else if ( vw768.matches ) {
-    const scale = (768 - document.documentElement.clientWidth) / 1000;
+    const scale = (768 - document.documentElement.clientWidth) / 800;
     phoneBody.forEach(el => el.style.transform = `scale(${ 1 -  scale }`);
     console.log('768');
     //phoneBody.forEach(el => el.style.transform = `scale(1)`);

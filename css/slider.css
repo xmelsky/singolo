@@ -55,6 +55,8 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  z-index: 5;
+  transform-origin: left;
 }
 
 .slider__phone_vertical {
@@ -462,7 +464,7 @@ img.apple {
 }
 
 
-@media screen and (max-width: 1020px) {
+@media screen and (min-width: 1020px) {
   .slider__phone_body {
     width: 217px;
     height: 461px;
@@ -475,9 +477,9 @@ img.apple {
   }
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (min-width: 768px) and (max-width: 1019px) {
   .slider {
-    height: 451px;
+    height: calc(451px - (451 * (768px - 100vw) / 768));
   }
   .slider__phone_vertical {
     width: 181px;
@@ -494,7 +496,7 @@ img.apple {
     height: 345px;
   }
   .slider__phone_horizontal {
-    padding: 0 0 25px 34px;
+    padding: 0 0 25px calc(34px - (34 * (768px - 100vw) / 768));
   }
   .slider__phone_body {
     position: relative;
@@ -527,7 +529,7 @@ img.apple {
   .phone-screen__image-horizontal {
     background-position: -93px -89px;
     background-size: 436px;
-}
+  }
   .phone-screen__image-verical, .phone-screen__off {
     background-position: -11px -101px;
     background-size: 436px;
@@ -560,7 +562,14 @@ img.apple {
     background-position: -10px 277px;
   }
 
-.slider__item[data-slide='1'] {
+  .slider__item[data-slide='1'] {
     border-bottom: 5px solid #ea676b;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .slider__phone_horizontal {
+    position: relative;
+    left: calc(0px - (40 * (850px - 100vw) / 550));
   }
 }
