@@ -478,6 +478,27 @@ img.apple {
 }
 
 @media screen and (min-width: 768px) and (max-width: 1019px) {
+
+  .slider__phone_body img[alt=iphone] {
+    /* width: 163px;
+    height: 345px; */
+  }
+
+
+}
+
+@media screen and (max-width: 768px){
+  .slider__phone_shadow {
+    position: absolute;
+    z-index: 1;
+    width: 181px;
+    height: 368px;
+    background-repeat: no-repeat;
+    background-image: url(../assets/images/iphone/shadow-768.png);
+  }
+  .slider__phone_horizontal {
+    padding: 0 0 25px calc(34px - (34 * (768px - 100vw) / 768));
+  }
   .slider {
     height: calc(451px - (451 * (768px - 100vw) / 768));
   }
@@ -491,13 +512,12 @@ img.apple {
     justify-content: center;
     align-items: center;
   }
+
   .slider__phone_body img[alt=iphone] {
-    width: 163px;
-    height: 345px;
+      width: 163px;
+      height: 345px;
   }
-  .slider__phone_horizontal {
-    padding: 0 0 25px calc(34px - (34 * (768px - 100vw) / 768));
-  }
+
   .slider__phone_body {
     position: relative;
     width: 217px;
@@ -571,5 +591,10 @@ img.apple {
   .slider__phone_horizontal {
     position: relative;
     left: calc(0px - (40 * (850px - 100vw) / 550));
+  }
+@media screen and (max-width: 375px) {
+  .slider__phone_body img[alt=iphone] {
+    width: 88px;
+    height: 177px;
   }
 }
