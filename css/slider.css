@@ -1,7 +1,6 @@
 /* SLIDER */
 
 .slider {
-
   display: flex;
   max-height: 600px;
   height: calc(600px - (600 * (1020px - 100vw) / 1020));
@@ -463,7 +462,6 @@ img.apple {
   }
 }
 
-
 @media screen and (min-width: 1020px) {
   .slider__phone_body {
     width: 217px;
@@ -478,16 +476,13 @@ img.apple {
 }
 
 @media screen and (min-width: 768px) and (max-width: 1019px) {
-
-  .slider__phone_body img[alt=iphone] {
-    /* width: 163px;
-    height: 345px; */
-  }
-
-
+  /* .slider__phone_body img[alt=iphone] {
+    width: 163px;
+    height: 345px;
+  } */
 }
 
-@media screen and (max-width: 768px){
+@media screen and (max-width: 768px) {
   .slider__phone_shadow {
     position: absolute;
     z-index: 1;
@@ -514,8 +509,8 @@ img.apple {
   }
 
   .slider__phone_body img[alt=iphone] {
-      width: 163px;
-      height: 345px;
+    width: 163px;
+    height: 345px;
   }
 
   .slider__phone_body {
@@ -550,7 +545,8 @@ img.apple {
     background-position: -93px -89px;
     background-size: 436px;
   }
-  .phone-screen__image-verical, .phone-screen__off {
+  .phone-screen__image-verical,
+  .phone-screen__off {
     background-position: -11px -101px;
     background-size: 436px;
   }
@@ -592,9 +588,91 @@ img.apple {
     position: relative;
     left: calc(0px - (40 * (850px - 100vw) / 550));
   }
+}
 @media screen and (max-width: 375px) {
   .slider__phone_body img[alt=iphone] {
-    width: 88px;
-    height: 177px;
+    width: 80px;
+    height: 168px;
+  }
+  .slider__phone_shadow {
+    position: absolute;
+    z-index: 1;
+    width: 89px;
+    height: 178px;
+    background-repeat: no-repeat;
+    background-image: url(../assets/images/iphone/shadow-375.png);
+  }
+  .slider__phone_horizontal .slider__phone_shadow {
+    right: -7px;
+    bottom: -33px;
+  }
+  .slider__phone_vertical .slider__phone_shadow {
+    left: 3px;
+    top: -24px;
+  }
+  .phone-screen__image-verical, .phone-screen__off {
+    background-position: -4px -49px;
+    background-size: 213px;
+  }
+  .phone-screen__image-horizontal {
+    background-position: -45px -43px;
+    background-size: 213px;
+  }
+  .slider__phone_body {
+    position: relative;
+    width: 86px;
+    height: 123px;
+  }
+  .slider__phone_vertical {
+    width: 181px;
+    padding: 0;
+    padding-bottom: 12px;
+  }
+  .slider__phone_vertical .phone-screen {
+    left: 8px;
+    top: 0px;
+    width: 71px;
+    height: 123px;
+  }
+  .slider__phone_horizontal .phone-screen {
+    left: -19px;
+    top: 27px;
+    width: 123px;
+    height: 71px;
+  }
+  .phone-button {
+    bottom: -21px;
+    right: 35px;
+    width: 16px;
+    height: 16px;
+  }
+  .slider__phone.slider__phone_horizontal .phone-button {
+    top: 57px;
+    left: -39px;
+  }
+  .switch-off > .info {
+    transform: scale(.5);
+    bottom: -14px;
+  }
+  .phone-screen__off.horizontal {
+    width: 211px;
+    height: 261px;
+  }
+  .phone-screen__off.horizontal {
+    top: -95px;
+    left: 23px;
+  }
+  .slider__phone_horizontal {
+    position: relative;
+    left: 0;
+  }
+  .slider__phone_horizontal {
+    padding: 0 0 13px calc(34px - (34 * (768px - 100vw) / 768));
+  }
+  .phone-screen__image-horizontal[data-image='2'] {
+    background-position: -4px 138px;
+  }
+  .phone-screen__image-verical[data-image='2'] {
+    background-position: -48px -15px;
   }
 }
