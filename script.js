@@ -111,7 +111,9 @@ const loadBar = document.querySelector('.scroll-progress');
 const headerPosition = header.offsetTop + header.offsetHeight;
 let scrollPosition = window.scrollY;
 window.onscroll = () => stickyHeader();
-window.onload = stickyHeader();
+window.onload = () => stickyHeader();
+window.onresize = () => adjustSliderScale();
+
 
 function stickyHeader(e) {
   // Set header state
@@ -146,6 +148,33 @@ function stickyHeader(e) {
   const scrollBase = document.documentElement.scrollHeight - window.innerHeight;
   const percentWidth = (scrollBase - Math.ceil(window.pageYOffset)) / scrollBase;
   loadBar.style.width = initialWidth * ( 1 - percentWidth) + 'px';
+
+
+  adjustSliderScale();
+}
+
+
+function adjustSliderScale(){
+  const vw1020 = window.matchMedia('(min-width: 769px) and (max-width: 1020px)');
+  const vw768 = window.matchMedia('(min-width: 376px) and (max-width: 768px)');
+  const vw375 = window.matchMedia('(max-width: 375px)');
+  const phoneBody = document.querySelectorAll('.slider__phone_body');
+
+  if (vw1020.matches) {
+    const scale = (1020 - document.documentElement.clientWidth) / 1000;
+    phoneBody.forEach(el => el.style.transform = `scale(${ 1 -  scale }`);
+    console.log('1020');
+  } else if ( vw768.matches ) {
+    const scale = (768 - document.documentElement.clientWidth) / 1000;
+    phoneBody.forEach(el => el.style.transform = `scale(${ 1 -  scale }`);
+    console.log('768');
+    //phoneBody.forEach(el => el.style.transform = `scale(1)`);
+  } else if ( vw375.matches ) {
+    console.log('768');
+    phoneBody.forEach(el => el.style.transform = `scale(1)`);
+  } else {
+    phoneBody.forEach(el => el.style.transform = `scale(1)`);
+  }
 }
 
 // if (window.screen.availWidth- (window.screen.availWidth - window.innerWidth) >  1366 ) {
