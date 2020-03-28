@@ -3,17 +3,19 @@ import {FormHandler} from './js/formHandler.js';
 import {activeLinkHandler} from './js/tabs.js';
 import {DragAndDrop} from './js/dragAndDropHandler.js';
 
+
+
 // Set handlers to set active element after click
-
-
 
 const menu = document.querySelector('.menu');
 const filter = document.querySelector('.filter-buttons');
 const gallery = document.querySelector('.gallery');
 
-activeLinkHandler(menu, false);
+activeLinkHandler(menu, false, undefined, () => closeOpenMenu());
 activeLinkHandler(filter, 'BUTTON', undefined, () => manageGalleryImages(gallery, 'LI'));
 activeLinkHandler(gallery, 'IMG', 'LI');
+
+
 
 //Set Drag&Drop handler and send parent and childTagname
 
@@ -44,6 +46,8 @@ const formOptions = {
 }
 const formHandler = new FormHandler(form, formOptions);
 form.onsubmit = (e) => formHandler.validate(e);
+
+
 
 // Set slider prerequisites
 
@@ -76,11 +80,14 @@ sliderContainer.addEventListener( 'click', e => {
   }
 } );
 
+
+
 // Set slider handler for arrow keys <- and ->
 document.addEventListener( 'keyup', e => {
   if ( e.keyCode === 37 ) slider.slide( 'left' );
   else if ( e.keyCode === 39 ) slider.slide( 'right' );
 } );
+
 
 
 
@@ -104,14 +111,18 @@ function manageGalleryImages(element, link) {
   });
 }
 
+
 // Set function to manage Header states: sticky, up, relative
 
 const header = document.querySelector( 'header' );
 const loadBar = document.querySelector('.scroll-progress');
 const headerPosition = header.offsetTop + header.offsetHeight;
+const menuButton = document.querySelector('.menu-button');
 let scrollPosition = window.scrollY;
-window.onscroll = (e) => stickyHeader(e);
-window.onload = stickyHeader();
+window.onscroll = () => stickyHeader();
+window.onload = () => stickyHeader();
+window.onresize = () => adjustSliderScale();
+
 
 function stickyHeader(e) {
   // Set header state
@@ -141,15 +152,60 @@ function stickyHeader(e) {
 
   });
 
+
   // Scroll status bar
   const initialWidth = parseInt(window.getComputedStyle(header).getPropertyValue('width'));
   const scrollBase = document.documentElement.scrollHeight - window.innerHeight;
   const percentWidth = (scrollBase - Math.ceil(window.pageYOffset)) / scrollBase;
   loadBar.style.width = initialWidth * ( 1 - percentWidth) + 'px';
+
+
+  adjustSliderScale();
+  }
+
+function closeOpenMenu() {
+  header.querySelector('nav').classList.remove('visible');
+  header.querySelector('.logo').classList.remove('hide');
+  menuButton.classList.remove('open');
 }
 
-// if (window.screen.availWidth- (window.screen.availWidth - window.innerWidth) >  1366 ) {
-// // Use intersectionObserver API instead of window scroll calculations due to perfomance
+function adjustSliderScale(){
+  const vw1020 = window.matchMedia('(min-width: 769px) and (max-width: 1019px)');
+  const vw768 = window.matchMedia('(min-width: 376px) and (max-width: 767px)');
+  const vw375 = window.matchMedia('(max-width: 374px)');
+  const phoneBody = document.querySelectorAll('.slider__phone');
+  const loader = document.querySelector('.loader');
+
+  if (vw1020.matches) {
+    const scale = (1020 - document.documentElement.clientWidth) / 800;
+    phoneBody.forEach(el => el.style.transform = `scale(${ 1 -  scale }`);
+  } else if ( vw768.matches ) {
+    const scale = (768 - document.documentElement.clientWidth) / 800;
+    phoneBody.forEach(el => el.style.transform = `scale(${ 1 -  scale }`);
+  } else if ( vw375.matches ) {
+    const scale = (374 - document.documentElement.clientWidth) / 800;
+    phoneBody.forEach(el => el.style.transform = `scale(${ 1 -  scale }`);
+  } else {
+    phoneBody.forEach(el => el.style.transform = `scale(1)`);
+  }
+}
+
+
+menuButton.addEventListener('click', ({currentTarget}) => {
+  if (currentTarget.classList.contains('open')) {
+    currentTarget.classList.remove('open');
+    header.querySelector('nav').classList.remove('visible');
+    header.querySelector('.logo').classList.remove('hide');
+  } else {
+    currentTarget.classList.add('open');
+    header.querySelector('.logo').classList.add('hide');
+    header.querySelector('nav').classList.add('visible');
+  }
+
+});
+
+
+// Use intersectionObserver API instead of window scroll calculations due to perfomance
 
 //   let options = {
 //     root: null,
