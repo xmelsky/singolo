@@ -2,8 +2,10 @@ import {Slider} from './js/slider.js';
 import {FormHandler} from './js/formHandler.js';
 import {activeLinkHandler} from './js/tabs.js';
 import {DragAndDrop} from './js/dragAndDropHandler.js';
+import preloader from './js/preloader.js';
 
-
+// Run preloader
+const Preloader = new preloader();
 
 // Set handlers to set active element after click
 
@@ -120,7 +122,11 @@ const headerPosition = header.offsetTop + header.offsetHeight;
 const menuButton = document.querySelector('.menu-button');
 let scrollPosition = window.scrollY;
 window.onscroll = () => stickyHeader();
-window.onload = () => stickyHeader();
+window.onload = () => {
+  stickyHeader();
+  document.querySelector('.load-screen').style.display = 'none';
+  Preloader.stopAnimation();
+};
 window.onresize = () => adjustSliderScale();
 
 
