@@ -5,7 +5,7 @@
   max-height: 600px;
   height: calc(600px - (600 * (1020px - 100vw) / 1020));
   flex-wrap: nowrap;
-  background-color: #f06c64;
+  background-color: transparent;
   position: relative;
   overflow: hidden;
 }
@@ -248,12 +248,14 @@
   background-image: url(../assets/images/iphone/slide-1.png);
   background-repeat: repeat-x;
   border-bottom: 6px solid #ea676b;
+  background: #ea676b;
 }
 
 .slider__item[data-slide='2'] {
   background-image: url(../assets/images/iphone/slide-2.png);
   background-repeat: repeat-x;
   border-bottom: 6px solid #648bf0;
+  background: #648bf0;
 }
 
 .phone_screen img.vertical {
