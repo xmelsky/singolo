@@ -527,16 +527,16 @@ img.apple {
     bottom: -10px;
   }
   .slider__phone_vertical .phone-screen {
-    left: 21px;
-    top: 60px;
-    width: 142px;
-    height: 251px;
+    left: 20px;
+    top: 58px;
+    width: 143px;
+    height: 253px;
   }
   .slider__phone_horizontal .phone-screen {
     left: -19px;
-    top: 114px;
-    width: 251px;
-    height: 143px;
+    top: 113px;
+    width: 253px;
+    height: 145px;
   }
   .phone-screen__image-horizontal {
     width: inherit;
@@ -621,7 +621,7 @@ img.apple {
   .slider__phone_body {
     position: relative;
     width: 86px;
-    height: 123px;
+    height: 124px;
   }
   .slider__phone_vertical {
     width: 181px;
@@ -632,12 +632,12 @@ img.apple {
     left: 8px;
     top: 0px;
     width: 71px;
-    height: 123px;
+    height: 124px;
   }
   .slider__phone_horizontal .phone-screen {
     left: -19px;
     top: 27px;
-    width: 123px;
+    width: 124px;
     height: 71px;
   }
   .phone-button {

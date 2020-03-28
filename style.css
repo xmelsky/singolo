@@ -839,9 +839,10 @@ form * {
 .contact-form {
   position: relative;
   background-color: #f06c64;
-  max-width: 619px;
+  /* max-width: 619px; */
   flex-grow: 1;
   margin-bottom: 6px;
+  padding-right: 20px;
 }
 
 .contact-form__input,
@@ -991,6 +992,24 @@ form * {
   -o-transition: width .05s ease-in-out;
 }
 
+nav .logo {
+  display: none;
+}
+
+.overlay-box {
+  display: none;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #2D303A;
+  opacity: .6;
+  z-index: 55;
+}
+
 /* MEDIA SCREEEN */
 
 @media screen and (max-width: 1020px) {
@@ -1012,11 +1031,14 @@ form * {
     padding-right: 15px;
   }
   .contact-form {
-    padding-right: 30px;
+    padding-right: 20px;
   }
   .about img {
     width: 100%;
     height: auto;
+  }
+  nav .logo {
+    display: none;
   }
 }
 
@@ -1119,10 +1141,10 @@ form * {
     /* max-width: 220px; */
     width: 100%;
   }
-  .contact-form {
+  /* .contact-form {
     max-width: 442px;
     padding-right: 0;
-  }
+  } */
   .getQuote .contact-info {
     max-width: 221px;
   }
@@ -1169,6 +1191,9 @@ form * {
   .our-services__subtitle {
     font-family: Lato-Light;
   }
+  nav .logo {
+    display: none;
+  }
 }
 
 @media screen and (min-width: 375px) and (max-width: 767px) {
@@ -1206,7 +1231,7 @@ form * {
 
   .about .section-content__item {
     width: 100%;
-    max-width: 350px;
+    max-width: 355px;
   }
   .getQuote .layout-2column {
     display: flex;
@@ -1239,7 +1264,7 @@ form * {
   }
   nav {
     flex-direction: column;
-    position: absolute;
+    position: fixed;
     left: -100%;
     top: 0;
     height: 100vh;
@@ -1247,7 +1272,61 @@ form * {
     width: 278px;
     background: #2d303a;
     box-shadow: 0px -40px 20px rgba(0, 0, 0, 0.4);
+    transition: all .3s ease-in-out;
+    -webkit-transition: all .3s ease-in-out;
+    -moz-transition: all .3s ease-in-out;
+    -ms-transition: all .3s ease-in-out;
+    -o-transition: all .3s ease-in-out;
+}
+
+  nav.visible {
+    left: 0;
   }
+
+  nav.visible ~ .overlay-box {
+    display: block;
+  }
+
+  nav .logo{
+    display: block;
+    position: absolute;
+    top: 24px;
+    left: 50px;
+    transition: all .2s ease-in;
+    -webkit-transition: all .2s ease-in;
+    -moz-transition: all .2s ease-in;
+    -ms-transition: all .2s ease-in;
+    -o-transition: all .2s ease-in;
+}
+
+header.sticky nav.visible .logo{
+  top: 12px;
+  left: 30px;
+}
+
+header > .logo {
+  opacity: 1;
+  transition: all .5s ease-out;
+  -webkit-transition: all .5s ease-out;
+  -moz-transition: all .5s ease-out;
+  -ms-transition: all .5s ease-out;
+  -o-transition: all .5s ease-out;
+}
+
+header > .logo.hide {
+  opacity: 0;
+  transition: all .5s ease-out;
+  -webkit-transition: all .5s ease-out;
+  -moz-transition: all .5s ease-out;
+  -ms-transition: all .5s ease-out;
+  -o-transition: all .5s ease-out;
+  transform:  translate(-50%);
+  -webkit-transform:  translate(-50%);
+  -moz-transform:  translate(-50%);
+  -ms-transform:  translate(-50%);
+  -o-transform:  translate(-50%);
+}
+
   nav .menu {
     flex-direction: column;
   }
@@ -1294,12 +1373,19 @@ form * {
     font-size: 29px;
   }
   .menu-button {
+    cursor: pointer;
     z-index: 999;
     width: 25px;
     height: 25px;
     position: absolute;
-    left: 25px;
+    left: 20px;
+    top: 21px;
+    outline: none;
   }
+  header.sticky > .menu-button {
+    top: 7px;
+  }
+
   .menu-button span {
     display: block;
     width: 25px;
@@ -1414,6 +1500,10 @@ form * {
     font-family: Lato-Light;
     padding: 15px 0 51px 0;
   }
+  .filter-buttons {
+    flex-wrap: wrap;
+  }
+
   .about ul.section-content {
     flex-wrap: wrap;
     justify-content: center;
@@ -1421,7 +1511,7 @@ form * {
 
   .about .section-content__item {
     width: 100%;
-    max-width: 350px;
+    max-width: 355px;
   }
   .getQuote .layout-2column {
     display: flex;
@@ -1454,15 +1544,69 @@ form * {
   }
   nav {
     flex-direction: column;
-    position: absolute;
-    left: -100%;
+    position: fixed;
+    left: -180%;
     top: 0;
     height: 100vh;
     z-index: 500;
     width: 278px;
     background: #2d303a;
     box-shadow: 0px -40px 20px rgba(0, 0, 0, 0.4);
+    transition: all .3s ease-in-out;
+    -webkit-transition: all .3s ease-in-out;
+    -moz-transition: all .3s ease-in-out;
+    -ms-transition: all .3s ease-in-out;
+    -o-transition: all .3s ease-in-out;
+}
+
+  nav.visible {
+    left: 0;
   }
+
+  nav.visible ~ .overlay-box {
+    display: block;
+  }
+
+  nav .logo{
+    display: block;
+    position: absolute;
+    top: 24px;
+    left: 50px;
+    transition: all .2s ease-in;
+    -webkit-transition: all .2s ease-in;
+    -moz-transition: all .2s ease-in;
+    -ms-transition: all .2s ease-in;
+    -o-transition: all .2s ease-in;
+}
+
+header.sticky nav.visible .logo{
+  top: 12px;
+  left: 30px;
+}
+
+header > .logo {
+  opacity: 1;
+  transition: all .5s ease-out;
+  -webkit-transition: all .5s ease-out;
+  -moz-transition: all .5s ease-out;
+  -ms-transition: all .5s ease-out;
+  -o-transition: all .5s ease-out;
+}
+
+header > .logo.hide {
+  opacity: 0;
+  transition: all .5s ease-out;
+  -webkit-transition: all .5s ease-out;
+  -moz-transition: all .5s ease-out;
+  -ms-transition: all .5s ease-out;
+  -o-transition: all .5s ease-out;
+  transform:  translate(-50%);
+  -webkit-transform:  translate(-50%);
+  -moz-transform:  translate(-50%);
+  -ms-transform:  translate(-50%);
+  -o-transform:  translate(-50%);
+}
+
   nav .menu {
     flex-direction: column;
   }
@@ -1509,12 +1653,19 @@ form * {
     font-size: 29px;
   }
   .menu-button {
+    cursor: pointer;
     z-index: 999;
     width: 25px;
     height: 25px;
     position: absolute;
-    left: 25px;
+    left: 20px;
+    top: 21px;
+    outline: none;
   }
+  header.sticky > .menu-button {
+    top: 7px;
+  }
+
   .menu-button span {
     display: block;
     width: 25px;
@@ -1599,3 +1750,45 @@ form * {
     height: 100%;
   }
 }
+
+.menu-button {
+  background: none;
+  border: none;
+  transition: all .3s ease-in-out;
+  -webkit-transition: all .3s ease-in-out;
+  -moz-transition: all .3s ease-in-out;
+  -ms-transition: all .3s ease-in-out;
+  -o-transition: all .3s ease-in-out;
+}
+
+.menu-button.open {
+  transition: all .3s ease-in-out;
+  -webkit-transition: all .3s ease-in-out;
+  -moz-transition: all .3s ease-in-out;
+  -ms-transition: all .3s ease-in-out;
+  -o-transition: all .3s ease-in-out;
+  transform: rotate(-90deg);
+  -webkit-transform: rotate(-90deg);
+  -moz-transform: rotate(-90deg);
+  -ms-transform: rotate(-90deg);
+  -o-transform: rotate(-90deg);
+}
+
+@media screen and (max-width: 280px) {
+
+.services__item {
+
+    background-position: center top;
+}
+  .services__item_description {
+    width: 100%;
+    padding-left: 0;
+    padding-top: 80px;
+    text-align: justify;
+  }
+}
+
+
+
+
+

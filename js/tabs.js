@@ -14,7 +14,14 @@ export const activeLinkHandler = (element, link, parent, cb) => {
         e.preventDefault();
         const className = e.target.getAttribute('href');
         const element =  document.querySelector('.' + className);
-        if(className) scroll.scrollSmooth(element);
+        if ( typeof cb === 'function') {
+          setTimeout(() => {
+            if(className) scroll.scrollSmooth(element, undefined, 20);
+          }, 200);
+          cb();
+        } else {
+          if(className) scroll.scrollSmooth(element);
+        };
         return;
       }
       if (e.target.tagName === link) {
@@ -29,12 +36,8 @@ export const activeLinkHandler = (element, link, parent, cb) => {
           } else {
             e.target.classList.add('active');
           }
-
-          //ScrollTo handler when click on menu
-          // const target = e.target.getAttribute('href');
-          // if(target) target == 'home' ? scroll.scrollToTop() : scroll.smooth(e.target.getAttribute('href'));
-
           if ( typeof cb === 'function') cb();
         }
+
       });
   }
